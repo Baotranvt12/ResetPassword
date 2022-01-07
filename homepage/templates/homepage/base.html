@@ -19,8 +19,6 @@
     <link href="{% static 'css/swiper-min.css' %}" rel="stylesheet" />
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-
     <script src="https://kit.fontawesome.com/0c070a03b6.js" crossorigin="anonymous"></script>
 
     <!-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
@@ -71,31 +69,35 @@
                                 <div id="menu" class="text-left">
                                     <ul class="main-menu list-style">
                                         <li>
-                                            <a class="active" href="{% url 'homepage:index' %}">Trang Chủ</a>
+                                            <!-- <a class="active" href="{% url 'homepage:index' %}">Trang Chủ</a> -->
+                                            <a {% if "/" == request.path %} class="active" {% endif %} href="{% url 'homepage:index' %}">Trang Chủ</a>
                                         </li>
                                         <li>
-                                            <a class="" href="{% url 'homepage:about' %}">Giới Thiệu</a>
+                                            <a {% if "/gioi-thieu" == request.path %} class="active" {% endif %} href="{% url 'homepage:about' %}">Giới Thiệu</a>
                                         </li>
                                         <li>
-                                            <a href="{% url 'homepage:lesson' %}">Bài Học</a>
+                                            <a {% if "/danh-sach-bai-hoc" == request.path %} class="active" {% endif %} href="{% url 'homepage:lesson' %}">Bài Học</a>
                                         </li>
                                         <li>
-                                            <a href="{% url 'homepage:practice' %}">Luyện Tập</a>
+                                            <a {% if "/luyen-tap" == request.path %} class="active" {% endif %} href="{% url 'homepage:practice' %}">Luyện Tập</a>
                                         </li>
                                         <li>
-                                            <a href="{% url 'homepage:test' %}">Kiểm Tra</a>
+                                            <a {% if "/kiem-tra" == request.path %} class="active" {% endif %} href="{% url 'homepage:test' %}">Kiểm Tra</a>
                                         </li>
                                         <li>
-                                            <a href="{% url 'homepage:competition' %}">Cuộc Thi</a>
+                                            <a {% if "/cuoc-thi" == request.path %} class="active" {% endif %} href="{% url 'homepage:competition' %}">Cuộc Thi</a>
                                         </li>
-
-                                        <li><a href="{% url 'homepage:news' %}">Tin Tức</a></li>
-                                        <li><a href="{% url 'homepage:document' %}">Tài Liệu</a></li>
+                                        <li>
+                                            <a {% if "/tin-tuc" == request.path %} class="active" {% endif %} href="{% url 'homepage:news' %}">Tin Tức</a>
+                                        </li>
+                                        <li>
+                                            <a {% if "/tai-lieu" == request.path %} class="active" {% endif %} href="{% url 'homepage:document' %}">Tài Liệu</a>
+                                        </li>
                                         <li class="has-children">
-                                            <a href="{% url 'homepage:support' %}">Hỗ Trợ</a>
+                                            <a {% if "/ho-tro" == request.path %} class="active" {% endif %} href="{% url 'homepage:support' %}">Hỗ Trợ</a>
                                             <ul class="sub-menu list-style">
-                                                <li><a href="{% url 'homepage:faq' %}">Câu hỏi thường gặp</a></li>
-                                                <li><a href="{% url 'homepage:contact' %}">Liên Hệ</a></li>
+                                                <li><a {% if "/cau-hoi-thuong-gap" == request.path %} class="active" {% endif %} href="{% url 'homepage:faq' %}">Câu hỏi thường gặp</a></li>
+                                                <li><a {% if "/lien-he" == request.path %} class="active" {% endif %} href="{% url 'homepage:contact' %}">Liên Hệ</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -118,7 +120,7 @@
                                 <!-- <a href="{% url 'homepage:register' %}" class="btn style5"><i class="las la-user"></i>Đăng Ký</a> -->
                                 {% if user.is_authenticated %}
                                 <div class="dropdown">
-                                    <a href="">
+                                    <a href="{% url 'homepage:dashboard' user.pk %}">
                                         <!-- <img src="{{account.avatar}}"> -->
                                         <img src="{% static 'img/lesson/bee1.png' %}">
                                         {{user.username}}

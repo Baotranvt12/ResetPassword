@@ -35,13 +35,13 @@ class scene1 extends Phaser.Scene{
 		var level2 = this.add.sprite(610, 360, 'level2').setInteractive();
 
 		level2.on('pointerdown', function(){
-			this.scene.start('playGame2');
+			this.scene.start('playGame1');
 		}, this);
 
 		var level3 = this.add.sprite(1000, 360, 'level3').setInteractive();
 
 		level3.on('pointerdown', function(){
-			this.scene.start('playGame3');
+			this.scene.start('playGame1');
 		}, this);
 
 		var timedEvent = this.time.addEvent({ delay: 1000, callback: loops, callbackScope: this, loop: true });

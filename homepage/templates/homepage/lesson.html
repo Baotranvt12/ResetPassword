@@ -23,7 +23,6 @@
         </div>
     </div>
 
-
     <section class="course-wrap ptb-100">
         <div class="container">
             {% csrf_token %}
@@ -48,12 +47,12 @@
                                 {% endif %}
                             {% endif %}
                         </div>
-                        <div class="skills style1">
+                        <!-- <div class="skills style1">
                             <div class="skillbar clearfix" data-percent="89%">
                                 <div class="skillbar-bar" style="width: {{lesson.percent}}%">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="course-info">
                             <h3 class="course-title">
                                 <a  {% if user.is_authenticated %} href="{% url 'homepage:lessondetail' topic.pk lesson.pk %}" {% endif %}>
@@ -62,19 +61,34 @@
                             </h3>
                             <div class="course-rating-wrap">
                                 <div class="course-category">
-                                    <a  {% if user.is_authenticated %} href="{% url 'homepage:lessondetail' topic.pk lesson.pk %}" {% endif %}>
+                                    <a href="{% url 'homepage:lessondetail' topic.pk lesson.pk %}">
                                         {{lesson.name}}
                                     </a>
                                 </div>
                                 
                                 <ul class="ratings list-style">
-                                    {% with ''|center:lesson.stars as range %}
-                                    {% for _ in range %}
+                                    {# with ''|center:lesson.stars as range #}
+                                    {# for _ in range #}
                                     <!-- {{ forloop.counter }} -->
-                                    <li><i class="las la-star"></i></li>
-                                    {% endfor %}
-                                    {% endwith %}
+                                    <!-- <li><i class="las la-star"></i></li> -->
+                                    {# endfor #}
+                                    {# endwith #}
                                 </ul>
+                            </div>
+                            
+
+                            <div class="row">
+                                <div class="col-3">
+                                    {{lesson.percent}}%
+                                </div>
+                                <div class="col-2">
+                                    <div class="skills style1" style="width: 500%; padding: auto">
+                                        <div class="skillbar clearfix" data-percent="89%">
+                                            <div class="skillbar-bar" style="width: {{lesson.percent}}%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- <div class="course-metainfo">
                                 <div class="course-Lectures">

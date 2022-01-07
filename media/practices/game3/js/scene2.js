@@ -5,7 +5,7 @@ var keyblue2 = {};
 var keyred2 = {};
 
 // var char = "abcdefghijklmnopqrstuvwxyz_"
-var char = "asdfghjkl;_";
+var char = "asdf_";
 var words = ["ads", "fad", "fas", "sad", "fads"];
 var blue_, red_;
 
@@ -43,7 +43,7 @@ class scene2 extends Phaser.Scene{
 		this.load.image('label3','assets/label3.png');
 		this.load.image('label4','assets/label4.png');
 
-		for (var i = 0; i <= (char.length - 1); i++) {
+		for (var i in char) {
 			this.load.image('char' + char[i], 'assets/lower/char-' + char[i] + '.png');
 			this.load.image('blue' + char[i], 'assets/lower/blue-' + char[i] + '.png');
 			this.load.image('green' + char[i], 'assets/lower/green-' + char[i] + '.png');
@@ -52,9 +52,7 @@ class scene2 extends Phaser.Scene{
 			this.load.image('keyblue' + char[i], 'assets/key2/blue-' + char[i] + '.png');
 			this.load.image('keyred' + char[i], 'assets/key2/red-' + char[i] + '.png');
 			this.load.image('keygrey' + char[i], 'assets/key2/grey-' + char[i] + '.png');
-			
 		}
-
 
 		// for (var i in words) {
 		// 	this.load.image(words[i], 'assets/' + words[i] + '.png')
@@ -75,13 +73,13 @@ class scene2 extends Phaser.Scene{
 		this.add.image(600, 350, 'bg2');
 		// this.add.image(200, 100, 'bee');
 
-		// this.add.image(600, 500, 'bg-keyboard').setScale(0.8);
+		this.add.image(600, 500, 'bg-keyboard').setScale(0.8);
 		this.add.image(600, 500, 'keyboard').setScale(0.8);
 
-		var x_key2 = 338, y_key2 = 472;
+		var x_key2 = 238, y_key2 = 472;
 		// var keys = [];
 		
-		var row2 = "asdfghjkl;"; // hang phim giua		
+		var row2 = "asdf"; // hang phim giua		
 
 		for (var i in row2) {
 			this.add.image(x_key2, y_key2, 'keygrey' + char[i]).setScale(0.8);
@@ -94,7 +92,7 @@ class scene2 extends Phaser.Scene{
 			keyred2[k] = this.add.image(x_key2, y_key2, 'keyred' + char[i]).setScale(0.7);
 			keyred2[k].visible = false;
 
-			x_key2 += 52;
+			x_key2 += 73;
 		}
 
 		keypress = this.input.keyboard.addKeys('A,S,D,F,G,H,J,K,L,Q,W,E,R,T,Y,U,I,O,P,Z,X,C,V,B,N,M');

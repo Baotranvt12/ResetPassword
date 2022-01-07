@@ -46,9 +46,9 @@ class scene3 extends Phaser.Scene{
 			level = 'Xuất sắc'	
 		}
 		
-		this.add.text(screenCenterX, y_text, level, {fontSize: '65px', fontFamily: 'Calibri', color: 'black'}).setOrigin(0.5);;
-		this.add.text(screenCenterX, y_text + 70, 'Tổng ký tự: ' + counttrue1, {fontSize: '65px', fontFamily: 'Calibri', color: 'black'}).setOrigin(0.5);;
-		this.add.text(screenCenterX, y_text + 140, 'Tổng lỗi sai: ' + countfalse1, {fontSize: '65px', fontFamily: 'Calibri', color: 'black'}).setOrigin(0.5);;
+		this.add.text(screenCenterX, y_text, level, {fontSize: '65px', fontFamily: 'Calibri', color: 'black'}).setOrigin(0.5);
+		this.add.text(screenCenterX, y_text + 70, 'Tổng ký tự: ' + counttrue1, {fontSize: '65px', fontFamily: 'Calibri', color: 'black'}).setOrigin(0.5);
+		this.add.text(screenCenterX, y_text + 140, 'Tổng lỗi sai: ' + countfalse1, {fontSize: '65px', fontFamily: 'Calibri', color: 'black'}).setOrigin(0.5);
 
 		var restart = this.add.sprite(600, 635, 'restart').setInteractive();
 		restart.on('pointerdown', function(){

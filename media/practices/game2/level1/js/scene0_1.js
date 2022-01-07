@@ -3,7 +3,7 @@ class scene0_1 extends Phaser.Scene{
 		super('intro1');
 	}
 	preload(){
-		this.load.image('bg1','assets/background1.png');
+		this.load.image('bg','assets/background.png');
 		this.load.image('arrow','assets/arrow.png');
 		for (var i = 1; i <= 4; i++) {
 			this.load.image('story' + i,'assets/story' + i + '.png');
@@ -12,7 +12,8 @@ class scene0_1 extends Phaser.Scene{
 	}
 	create(){
 		this.sound.add('voice1').play();
-		this.add.image(600, 350, 'bg1');
+		var bg = this.add.image(600, 350, 'bg')
+		bg.alpha = 0.5;
 
 		var story1 = this.add.image(320, 175, 'story1');
 		var story2 = this.add.image(880, 175, 'story2'); story2.visible = false

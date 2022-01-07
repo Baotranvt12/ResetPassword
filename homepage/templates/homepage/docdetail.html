@@ -30,16 +30,17 @@
             <div class="row gx-5">
                 <div class="col-lg-10 offset-lg-1  col-md-12 col-12">
                     <article class="bg-white">
-                        <div class="post-img">
-                            <img src="{{document.image.url}}" alt="Image">
+                        <!-- <div class="post-img">
+                            <img src="{{document.image}}" alt="Image">
                         </div>
                         <ul class="post-meta list-style">
                             <li><i class="las la-clock"></i><a href="blog-details-right-sidebar.html"> {{document.createdate}} </a></li>
                           
-                        </ul>
-                        <h2 class="post-title">{{document.title}}</h2>
+                        </ul> -->
+                        <h2 class="post-title">{{document.title|safe}}</h2>
                         <div class="post-para">
-                            <p>{{document.content|safe|linebreaks}}</p>
+                            <iframe src="/media/documents/pdf/{{document.pdf}}" style="width: 100%;height: 800px;border: none;"></iframe>
+                            <!-- <p>{{document.content|safe|linebreaks}}</p> -->
                             <!-- <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
                                 sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
                                 consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore

@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 01, 2022 lúc 07:30 PM
--- Phiên bản máy phục vụ: 10.4.21-MariaDB
--- Phiên bản PHP: 7.3.31
+-- Host: 127.0.0.1
+-- Generation Time: Jan 04, 2022 at 05:38 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.3.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `mydata`
+-- Database: `mydata`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `account`
+-- Table structure for table `account`
 --
 
 CREATE TABLE `account` (
@@ -41,7 +41,7 @@ CREATE TABLE `account` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `account`
+-- Dumping data for table `account`
 --
 
 INSERT INTO `account` (`accountid`, `password`, `avatar`, `experience`, `createdate`, `editdate`, `isenable`, `note`, `username_id`, `callsignid_id`) VALUES
@@ -56,12 +56,12 @@ INSERT INTO `account` (`accountid`, `password`, `avatar`, `experience`, `created
 (13, 'aa', '/media/lesson1_veU6pVC.png', 0, '2021-11-17', '2021-11-17 13:09:59.800919', 1, NULL, 16, 1),
 (14, 'c', '/media/lesson6.png', 0, '2021-11-17', '2021-11-17 13:12:11.876030', 1, NULL, 17, 1),
 (15, 'khai', '/media/users//2beefinger.png', 60, '2021-11-30', '2021-12-17 11:14:06.295062', 1, NULL, 18, 1),
-(16, 'tuyet', '/media/users//3stars.png', 170, '2021-12-16', '2022-01-01 17:58:20.302378', 1, NULL, 24, 1);
+(16, 'tuyet', '/media/users//1star.png', 510, '2021-12-16', '2022-01-04 13:40:03.034748', 1, NULL, 24, 2);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `activity`
+-- Table structure for table `activity`
 --
 
 CREATE TABLE `activity` (
@@ -80,11 +80,11 @@ CREATE TABLE `activity` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `activity`
+-- Dumping data for table `activity`
 --
 
 INSERT INTO `activity` (`activityid`, `activityorder`, `name`, `image`, `description`, `link`, `stars`, `createdate`, `editdate`, `isenable`, `note`, `lessonid_id`) VALUES
-(1, 1, 'Giới thiệu bàn phím', 'media/lessons/images/hdgioithieu.png', '', '/media/lessons/lesson1/script1/asdf.mp4', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 1),
+(1, 1, 'Giới thiệu bàn phím', 'media/lessons/images/hdgioithieu.png', '', '/media/lessons/lesson1/script1/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 1),
 (2, 1, 'Kỹ năng gõ phím', 'media/lessons/images/hdgioithieu.png', '', '', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 2),
 (3, 1, 'Giới thiệu', 'media/lessons/images/hdgioithieu.png', '', 'https://www.youtube.com/embed/MWE9mcSUAU4', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 3),
 (4, 2, 'Gõ phím A S D F', 'media/lessons/images/hdlamquen.png\n', '', '/media/lessons/lesson3/script2/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 3),
@@ -106,12 +106,64 @@ INSERT INTO `activity` (`activityid`, `activityorder`, `name`, `image`, `descrip
 (20, 5, 'Vui gõ phím', 'media/lessons/images/hdvuigophim.png', '', '/media/lessons/lesson5/script5/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 5),
 (21, 4, 'Giải mã bàn phím', 'media/lessons/images/hdgiaima.png', '', '/media/lessons/lesson5/script4/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 5),
 (22, 5, 'Vui gõ phím', 'media/lessons/images/hdvuigophim.png', '', '/media/lessons/lesson6/script5/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 6),
-(23, 4, 'Giải mã bàn phím', 'media/lessons/images/hdgiaima.png', '', '/media/lessons/lesson6/script4/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 6);
+(23, 4, 'Giải mã bàn phím', 'media/lessons/images/hdgiaima.png', '', '/media/lessons/lesson6/script4/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 6),
+(24, 1, 'Giới thiệu', 'media/lessons/images/hdgioithieu.png', '', '/media/lessons/lesson7/script1/asdf.mp4', 3, '2021-12-28', '2021-12-28 02:55:50.802355', 1, '', 7),
+(25, 2, 'Gõ phím Q W E R', 'media/lessons/images/hdlamquen.png', '', '/media/lessons/lesson7/script2/index.html', 3, '2021-12-28', '2021-12-28 03:00:18.075073', 1, '', 7),
+(26, 3, 'Thử tài trí nhớ', 'media/lessons/images/hdtracnghiem.png', '', '/media/lessons/lesson7/script3/index.html', 3, '2021-11-05', '2021-12-24 20:28:49.080837', 1, '', 7),
+(27, 5, 'Vui gõ phím', 'media/lessons/images/hdvuigophim.png', '', '/media/lessons/lesson7/script5/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 7),
+(28, 4, 'Giải mã bàn phím', 'media/lessons/images/hdgiaima.png', '', '/media/lessons/lesson7/script4/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 7),
+(29, 1, 'Giới thiệu', 'media/lessons/images/hdgioithieu.png', '', '/media/lessons/lesson8/script1/asdf.mp4', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 8),
+(30, 2, 'Gõ phím U I O P', 'media/lessons/images/hdlamquen.png\r\n', '', '/media/lessons/lesson8/script2/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 8),
+(31, 3, 'Thử tài trí nhớ', 'media/lessons/images/hdtracnghiem.png', '', '/media/lessons/lesson8/script3/index.html', 3, '2021-11-05', '2021-12-24 20:29:07.320495', 1, '', 8),
+(32, 5, 'Vui gõ phím', 'media/lessons/images/hdvuigophim.png', '', '/media/lessons/lesson8/script5/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 8),
+(33, 4, 'Giải mã bàn phím', 'media/lessons/images/hdgiaima.png', '', '/media/lessons/lesson8/script4/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 8),
+(34, 1, 'Giới thiệu', 'media/lessons/images/hdgioithieu.png', '', 'https://www.youtube.com/embed/MWE9mcSUAU4', 3, '2021-12-28', '2021-12-28 02:55:50.802355', 1, '', 9),
+(35, 2, 'Gõ phím T Y', 'media/lessons/images/hdlamquen.png', '', '/media/lessons/lesson9/script2/index.html', 3, '2021-12-28', '2021-12-28 03:00:18.075073', 1, '', 9),
+(36, 3, 'Thử tài trí nhớ', 'media/lessons/images/hdtracnghiem.png', '', '/media/lessons/lesson9/script3/index.html', 3, '2021-11-05', '2021-12-24 20:29:01.366692', 1, '', 9),
+(37, 5, 'Vui gõ phím', 'media/lessons/images/hdvuigophim.png', '', '/media/lessons/lesson9/script5/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 9),
+(38, 4, 'Giải mã bàn phím', 'media/lessons/images/hdgiaima.png', '', '/media/lessons/lesson9/script4/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 9),
+(39, 4, 'Giải mã bàn phím', 'media/lessons/images/hdgiaima.png', '', '/media/lessons/lesson10/script4/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 10),
+(40, 5, 'Vui gõ phím', 'media/lessons/images/hdvuigophim.png', '', '/media/lessons/lesson10/script5/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 10),
+(41, 1, 'Giới thiệu', 'media/lessons/images/hdgioithieu.png', '', '/media/lessons/lesson11/script1/asdf.mp4', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 11),
+(42, 2, 'Gõ phím Z X C V', 'media/lessons/images/hdlamquen.png', '', '/media/lessons/lesson11/script2/index.html', 3, '2021-12-28', '2021-12-28 03:00:18.075073', 1, '', 11),
+(43, 3, 'Thử tài trí nhớ', 'media/lessons/images/hdtracnghiem.png', '', '/media/lessons/lesson11/script3/index.html', 3, '2021-11-05', '2021-12-24 20:29:01.366692', 1, '', 11),
+(44, 4, 'Giải mã bàn phím', 'media/lessons/images/hdgiaima.png', '', '/media/lessons/lesson11/script4/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 11),
+(45, 5, 'Vui gõ phím', 'media/lessons/images/hdvuigophim.png', '', '/media/lessons/lesson11/script5/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 11),
+(46, 1, 'Giới thiệu', 'media/lessons/images/hdgioithieu.png', '', '/media/lessons/lesson12/script1/asdf.mp4', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 12),
+(47, 2, 'Gõ phím M , . /', 'media/lessons/images/hdlamquen.png\r\n', '', '/media/lessons/lesson12/script2/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 12),
+(48, 3, 'Thử tài trí nhớ', 'media/lessons/images/hdtracnghiem.png', '', '/media/lessons/lesson12/script3/index.html', 3, '2021-11-05', '2021-12-24 20:28:49.080837', 1, '', 12),
+(49, 4, 'Giải mã bàn phím', 'media/lessons/images/hdgiaima.png', '', '/media/lessons/lesson12/script4/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 12),
+(50, 5, 'Vui gõ phím', 'media/lessons/images/hdvuigophim.png', '', '/media/lessons/lesson12/script5/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 12),
+(51, 1, 'Giới thiệu', 'media/lessons/images/hdgioithieu.png', '', '/media/lessons/lesson13/script1/asdf.mp4', 3, '2021-12-28', '2021-12-28 02:55:50.802355', 1, '', 13),
+(52, 2, 'Gõ phím B N', 'media/lessons/images/hdlamquen.png', '', '/media/lessons/lesson13/script2/index.html', 3, '2021-12-28', '2021-12-28 03:00:18.075073', 1, '', 13),
+(53, 3, 'Thử tài trí nhớ', 'media/lessons/images/hdtracnghiem.png', '', '/media/lessons/lesson13/script3/index.html', 3, '2021-11-05', '2021-12-24 20:29:01.366692', 1, '', 13),
+(54, 4, 'Giải mã bàn phím', 'media/lessons/images/hdgiaima.png', '', '/media/lessons/lesson13/script4/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 13),
+(55, 5, 'Vui gõ phím', 'media/lessons/images/hdvuigophim.png', '', '/media/lessons/lesson13/script5/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 13),
+(56, 4, 'Giải mã bàn phím', 'media/lessons/images/hdgiaima.png', '', '/media/lessons/lesson14/script4/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 14),
+(57, 5, 'Vui gõ phím', 'media/lessons/images/hdvuigophim.png', '', '/media/lessons/lesson14/script5/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 14),
+(58, 1, 'Giới thiệu', 'media/lessons/images/hdgioithieu.png', '', '/media/lessons/lesson15/script1/phimso.mp4', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 15),
+(59, 2, 'Gõ phím số', 'media/lessons/images/hdlamquen.png\r\n', '', '/media/lessons/lesson15/script2/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 15),
+(60, 3, 'Thử tài trí nhớ', 'media/lessons/images/hdtracnghiem.png', '', '/media/lessons/lesson15/script3/index.html', 3, '2021-11-05', '2021-12-24 20:29:07.320495', 1, '', 15),
+(61, 4, 'Giải mã bàn phím', 'media/lessons/images/hdgiaima.png', '', '/media/lessons/lesson15/script4/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 15),
+(62, 5, 'Vui gõ phím', 'media/lessons/images/hdvuigophim.png', '', '/media/lessons/lesson15/script5/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 15),
+(63, 1, 'Giới thiệu', 'media/lessons/images/hdgioithieu.png', '', '/media/lessons/lesson16/script1/phimchucnang.mp4', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 16),
+(64, 2, 'Gõ phím chức năng', 'media/lessons/images/hdlamquen.png\r\n', '', '/media/lessons/lesson16/script2/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 16),
+(65, 3, 'Thử tài trí nhớ', 'media/lessons/images/hdtracnghiem.png', '', '/media/lessons/lesson16/script3/index.html', 3, '2021-11-05', '2021-12-24 20:29:07.320495', 1, '', 16),
+(66, 3, 'Giải mã bàn phím', 'media/lessons/images/hdgiaima.png', '', '/media/lessons/lesson16/script3/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 16),
+(67, 5, 'Vui gõ phím', 'media/lessons/images/hdvuigophim.png', '', '/media/lessons/lesson16/script5/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 16),
+(69, 1, 'Giới thiệu', 'media/lessons/images/hdgioithieu.png', '', '/media/lessons/lesson17/script1/asdf.mp4', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 17),
+(70, 2, 'Học gõ dấu và chữ', 'media/lessons/images/hdlamquen.png', '', '/media/lessons/lesson17/script2/index.html', 3, '2021-11-05', '2021-12-28 04:07:05.252088', 1, '', 17),
+(71, 3, 'Thử tài trí nhớ', 'media/lessons/images/hdtracnghiem.png', '', '/media/lessons/lesson17/script3/index.html', 3, '2021-11-05', '2021-12-24 20:29:01.366692', 1, '', 17),
+(72, 5, 'Vui gõ phím', 'media/lessons/images/hdvuigophim.png', '', '/media/lessons/lesson17/script5/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 17),
+(73, 1, 'Giới thiệu', 'media/lessons/images/hdgioithieu.png', '', '/media/lessons/lesson18/script1/asdf.mp4', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 18),
+(74, 2, 'Học gõ dấu và chữ', 'media/lessons/images/hdlamquen.png', '', '/media/lessons/lesson18/script2/index.html', 3, '2021-11-05', '2021-12-28 04:07:05.252088', 1, '', 18),
+(75, 3, 'Thử tài trí nhớ', 'media/lessons/images/hdtracnghiem.png', '', '/media/lessons/lesson18/script3/index.html', 3, '2021-11-05', '2021-12-24 20:29:01.366692', 1, '', 18),
+(76, 5, 'Vui gõ phím', 'media/lessons/images/hdvuigophim.png', '', '/media/lessons/lesson18/script5/index.html', 3, '2021-11-05', '2021-11-05 15:12:23.000000', 1, '', 18);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `auth_group`
+-- Table structure for table `auth_group`
 --
 
 CREATE TABLE `auth_group` (
@@ -122,7 +174,7 @@ CREATE TABLE `auth_group` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `auth_group_permissions`
+-- Table structure for table `auth_group_permissions`
 --
 
 CREATE TABLE `auth_group_permissions` (
@@ -134,7 +186,7 @@ CREATE TABLE `auth_group_permissions` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `auth_permission`
+-- Table structure for table `auth_permission`
 --
 
 CREATE TABLE `auth_permission` (
@@ -145,7 +197,7 @@ CREATE TABLE `auth_permission` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `auth_permission`
+-- Dumping data for table `auth_permission`
 --
 
 INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALUES
@@ -280,12 +332,20 @@ INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALU
 (129, 'Can add tracking level game', 32, 'add_trackinglevelgame'),
 (130, 'Can change tracking level game', 32, 'change_trackinglevelgame'),
 (131, 'Can delete tracking level game', 32, 'delete_trackinglevelgame'),
-(132, 'Can view tracking level game', 32, 'view_trackinglevelgame');
+(132, 'Can view tracking level game', 32, 'view_trackinglevelgame'),
+(133, 'Can add lesson instruction', 33, 'add_lessoninstruction'),
+(134, 'Can change lesson instruction', 33, 'change_lessoninstruction'),
+(135, 'Can delete lesson instruction', 33, 'delete_lessoninstruction'),
+(136, 'Can view lesson instruction', 33, 'view_lessoninstruction'),
+(137, 'Can add category', 34, 'add_category'),
+(138, 'Can change category', 34, 'change_category'),
+(139, 'Can delete category', 34, 'delete_category'),
+(140, 'Can view category', 34, 'view_category');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `auth_user`
+-- Table structure for table `auth_user`
 --
 
 CREATE TABLE `auth_user` (
@@ -303,11 +363,11 @@ CREATE TABLE `auth_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `auth_user`
+-- Dumping data for table `auth_user`
 --
 
 INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
-(1, 'pbkdf2_sha256$260000$qkszsHqs5Vev83BDi3VH0F$Hur5ioP3yit46daKibnvE3l07aXHLNsMK1s8uqBMyVU=', '2022-01-01 17:07:25.388293', 1, 'admin', '', '', '', 1, 1, '2021-11-15 17:57:04.108713'),
+(1, 'pbkdf2_sha256$260000$qkszsHqs5Vev83BDi3VH0F$Hur5ioP3yit46daKibnvE3l07aXHLNsMK1s8uqBMyVU=', '2022-01-04 13:55:15.359918', 1, 'admin', '', '', '', 1, 1, '2021-11-15 17:57:04.108713'),
 (8, 'pbkdf2_sha256$260000$EZKfdqQ5xmP9XRQUeJRhj9$i/vCgukW59FZOlbq99m+TU9VCHKAPf0ttW5bCIwaULQ=', '2021-11-16 18:50:43.132575', 0, 'user1', '', '', '', 0, 1, '2021-11-16 18:11:26.806392'),
 (9, 'pbkdf2_sha256$260000$uAlLMdh6mwKMIrvG5791fa$r8WeZrTIGM6l+xPEZK0Qp4E/0bD36lzJrFK3K34Mc7s=', '2021-11-24 12:25:11.839459', 0, 'user2', '', '', '', 0, 1, '2021-11-16 19:30:56.514067'),
 (10, 'pbkdf2_sha256$260000$PA5rakwIEwlr8TjL4eYk46$hU61S6I2sErnrdy8Y+sKw75j6zDECqwKJpnDhiY0wRE=', '2021-12-16 10:59:21.785700', 0, 'user3', '', '', '', 0, 1, '2021-11-17 03:37:18.270245'),
@@ -318,13 +378,13 @@ INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `userna
 (15, 'pbkdf2_sha256$260000$wdjq2ccB29O3KRcZrsOw0V$LiYMnL4SNUSbIzVOg5IMqHMBuj3UbX5PDt07UdJDVro=', '2021-11-17 13:07:44.227791', 0, 'b', '', '', '', 0, 1, '2021-11-17 13:07:43.483380'),
 (16, 'pbkdf2_sha256$260000$qU1o4kC0TNXNE9STXnm2jl$Z4yszxhy/y/T1N+tf5cdXycHM7Da50akhgX6+H6hPxU=', '2021-11-17 13:09:59.788182', 0, 'aa', '', '', '', 0, 1, '2021-11-17 13:09:59.143465'),
 (17, 'pbkdf2_sha256$260000$VMIWjyMLC6IQGYXexosKdu$9y8ABseF+XhboUTo6gqmjJB5cNxgguQQ9k1jSp3RZXQ=', '2021-11-17 13:12:11.856230', 0, 'c', '', '', '', 0, 1, '2021-11-17 13:12:11.099719'),
-(18, 'pbkdf2_sha256$260000$P4QHNaqEF01A12AsHHtPwL$FwC328ZvfQswUbUCF+enCNqNrsJ7Fz8Mxr9tS5dlYbY=', '2021-12-17 10:53:43.417401', 0, 'khai', '', '', '', 0, 1, '2021-11-29 17:13:21.959850'),
-(24, 'pbkdf2_sha256$260000$vVJysss2GfWAf5kvtidrZK$kSrD14kFoxex/uv7bhAdSsTtfLMPja4h8glmd2yfrN0=', '2022-01-01 17:24:24.859682', 0, 'tuyet', '', '', '', 0, 1, '2021-12-16 11:08:41.897857');
+(18, 'pbkdf2_sha256$260000$P4QHNaqEF01A12AsHHtPwL$FwC328ZvfQswUbUCF+enCNqNrsJ7Fz8Mxr9tS5dlYbY=', '2022-01-01 19:21:01.649687', 0, 'khai', '', '', '', 0, 1, '2021-11-29 17:13:21.959850'),
+(24, 'pbkdf2_sha256$260000$vVJysss2GfWAf5kvtidrZK$kSrD14kFoxex/uv7bhAdSsTtfLMPja4h8glmd2yfrN0=', '2022-01-04 16:25:33.224691', 0, 'tuyet', '', '', '', 0, 1, '2021-12-16 11:08:41.897857');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `auth_user_groups`
+-- Table structure for table `auth_user_groups`
 --
 
 CREATE TABLE `auth_user_groups` (
@@ -336,7 +396,7 @@ CREATE TABLE `auth_user_groups` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `auth_user_user_permissions`
+-- Table structure for table `auth_user_user_permissions`
 --
 
 CREATE TABLE `auth_user_user_permissions` (
@@ -348,7 +408,7 @@ CREATE TABLE `auth_user_user_permissions` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `callsign`
+-- Table structure for table `callsign`
 --
 
 CREATE TABLE `callsign` (
@@ -364,7 +424,7 @@ CREATE TABLE `callsign` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `callsign`
+-- Dumping data for table `callsign`
 --
 
 INSERT INTO `callsign` (`callsignid`, `callsignorder`, `name`, `frame`, `exrequired`, `createdate`, `editdate`, `isenable`, `note`) VALUES
@@ -378,7 +438,30 @@ INSERT INTO `callsign` (`callsignid`, `callsignorder`, `name`, `frame`, `exrequi
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `character`
+-- Table structure for table `category`
+--
+
+CREATE TABLE `category` (
+  `categoryid` int(11) NOT NULL,
+  `name` varchar(250) NOT NULL,
+  `createdate` date DEFAULT NULL,
+  `editdate` datetime(6) DEFAULT NULL,
+  `isenable` tinyint(1) DEFAULT NULL,
+  `note` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`categoryid`, `name`, `createdate`, `editdate`, `isenable`, `note`) VALUES
+(1, 'Chương trình Tin Học', '2022-01-04', '2022-01-04 14:09:50.859540', 1, ''),
+(2, 'Chương trình Tổng thể', '2022-01-04', '2022-01-04 14:09:54.922989', 1, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `character`
 --
 
 CREATE TABLE `character` (
@@ -396,7 +479,7 @@ CREATE TABLE `character` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `competition`
+-- Table structure for table `competition`
 --
 
 CREATE TABLE `competition` (
@@ -414,7 +497,7 @@ CREATE TABLE `competition` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `competition`
+-- Dumping data for table `competition`
 --
 
 INSERT INTO `competition` (`competitionid`, `name`, `startdate`, `enddate`, `image`, `description`, `link`, `createdate`, `editdate`, `isenable`, `note`) VALUES
@@ -424,7 +507,7 @@ INSERT INTO `competition` (`competitionid`, `name`, `startdate`, `enddate`, `ima
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `competitionbadge`
+-- Table structure for table `competitionbadge`
 --
 
 CREATE TABLE `competitionbadge` (
@@ -442,7 +525,7 @@ CREATE TABLE `competitionbadge` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contact`
+-- Table structure for table `contact`
 --
 
 CREATE TABLE `contact` (
@@ -461,7 +544,7 @@ CREATE TABLE `contact` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contenttest`
+-- Table structure for table `contenttest`
 --
 
 CREATE TABLE `contenttest` (
@@ -477,7 +560,7 @@ CREATE TABLE `contenttest` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `contenttest`
+-- Dumping data for table `contenttest`
 --
 
 INSERT INTO `contenttest` (`contenttestid`, `name`, `description`, `link`, `createdate`, `editdate`, `isenable`, `note`, `image`) VALUES
@@ -488,7 +571,7 @@ INSERT INTO `contenttest` (`contenttestid`, `name`, `description`, `link`, `crea
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `django_admin_log`
+-- Table structure for table `django_admin_log`
 --
 
 CREATE TABLE `django_admin_log` (
@@ -503,7 +586,7 @@ CREATE TABLE `django_admin_log` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `django_admin_log`
+-- Dumping data for table `django_admin_log`
 --
 
 INSERT INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`, `action_flag`, `change_message`, `content_type_id`, `user_id`) VALUES
@@ -558,12 +641,39 @@ INSERT INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`,
 (49, '2021-12-31 11:06:01.275825', '1', 'Dễ', 2, '[]', 31, 1),
 (50, '2021-12-31 11:06:27.669648', '5', 'Trung bình', 1, '[{\"added\": {}}]', 31, 1),
 (51, '2021-12-31 11:06:51.204210', '6', 'Khó', 1, '[{\"added\": {}}]', 31, 1),
-(52, '2022-01-01 17:07:40.985197', '3', 'Khó', 2, '[{\"changed\": {\"fields\": [\"Link\"]}}]', 31, 1);
+(52, '2022-01-01 17:07:40.985197', '3', 'Khó', 2, '[{\"changed\": {\"fields\": [\"Link\"]}}]', 31, 1),
+(53, '2022-01-02 04:48:22.124585', '4', 'CHƯƠNG TRÌNH GIÁO DỤC PHỔ THÔNG - CHƯƠNG TRÌNH TỔNG THỂ 2018', 1, '[{\"added\": {}}]', 11, 1),
+(54, '2022-01-02 04:53:22.391030', '4', 'CHƯƠNG TRÌNH GIÁO DỤC PHỔ THÔNG - CHƯƠNG TRÌNH TỔNG THỂ 2018', 2, '[{\"changed\": {\"fields\": [\"Pdf\"]}}]', 11, 1),
+(55, '2022-01-02 20:14:52.076546', '6', 'CHƯƠNG TRÌNH GIÁO DỤC PHỔ THÔNG 2018 - CHƯƠNG TRÌNH MÔN TIN HỌC', 1, '[{\"added\": {}}]', 11, 1),
+(56, '2022-01-02 20:17:28.876777', '6', '<p>CHƯƠNG TR&Igrave;NH GI&Aacute;O DỤC PHỔ TH&Ocirc;NG 2018</p>\r\n\r\n<p>- CHƯƠNG TR&Igrave;NH M&Ocirc;N TIN HỌC</p>', 2, '[{\"changed\": {\"fields\": [\"Title\"]}}]', 11, 1),
+(57, '2022-01-02 20:18:13.113511', '6', '<p>CHƯƠNG TRÌNH GIÁO DỤC PHỔ THÔNG 2018</p>\r\n\r\n<p>- CHƯƠNG TRÌNH MÔN TIN HỌC</p>', 2, '[{\"changed\": {\"fields\": [\"Title\"]}}]', 11, 1),
+(58, '2022-01-02 20:18:55.584496', '6', '<p>CHƯƠNG TRÌNH GIÁO DỤC PHỔ THÔNG 2018</p> <p>- CHƯƠNG TRÌNH MÔN TIN HỌC</p>', 2, '[{\"changed\": {\"fields\": [\"Title\"]}}]', 11, 1),
+(59, '2022-01-02 20:19:39.734814', '6', 'CHƯƠNG TR&Igrave;NH GI&Aacute;O DỤC PHỔ TH&Ocirc;NG 2018\r\n\r\n- CHƯƠNG TR&Igrave;NH M&Ocirc;N TIN HỌC', 2, '[{\"changed\": {\"fields\": [\"Title\"]}}]', 11, 1),
+(60, '2022-01-02 20:21:07.029624', '6', 'CHƯƠNG TRÌNH GIÁO DỤC PHỔ THÔNG 2018\r\n- CHƯƠNG TRÌNH MÔN TIN HỌC', 2, '[{\"changed\": {\"fields\": [\"Title\"]}}]', 11, 1),
+(61, '2022-01-02 20:22:01.719844', '6', '<p>CHƯƠNG TR&Igrave;NH GI&Aacute;O DỤC PHỔ TH&Ocirc;NG 2018</p>\r\n\r\n<p>- CHƯƠNG TR&Igrave;NH M&Ocirc;N TIN HỌC</p>', 2, '[{\"changed\": {\"fields\": [\"Title\"]}}]', 11, 1),
+(62, '2022-01-02 20:25:52.232323', '6', '<p>CHƯƠNG TR&Igrave;NH GI&Aacute;O DỤC PHỔ TH&Ocirc;NG 2018<br />\r\n- CHƯƠNG TR&Igrave;NH M&Ocirc;N TIN HỌC</p>', 2, '[{\"changed\": {\"fields\": [\"Title\"]}}]', 11, 1),
+(63, '2022-01-02 20:26:06.432093', '6', '<p>CHƯƠNG TR&Igrave;NH GI&Aacute;O DỤC PHỔ TH&Ocirc;NG 2018<br />\r\n- CHƯƠNG TR&Igrave;NH M&Ocirc;N TIN HỌC</p>', 2, '[]', 11, 1),
+(64, '2022-01-02 20:26:43.392506', '6', '<p>CHƯƠNG TRÌNH GIÁO DỤC PHỔ THÔNG 2018<br />\r\n- CHƯƠNG TRÌNH MÔN TIN HỌC</p>', 2, '[{\"changed\": {\"fields\": [\"Title\"]}}]', 11, 1),
+(65, '2022-01-02 20:27:16.685693', '5', '<p>CHƯƠNG TR&Igrave;NH GI&Aacute;O DỤC PHỔ TH&Ocirc;NG TỔNG THỂ 2018<br />\r\n- T&Oacute;M TẮT TỔNG THỂ</p>', 2, '[{\"changed\": {\"fields\": [\"Title\"]}}]', 11, 1),
+(66, '2022-01-02 20:27:37.529018', '5', '<p>CHƯƠNG TRÌNH GIÁO DỤC PHỔ THÔNG TỔNG THỂ 2018<br />\r\n- TÓM TẮT TỔNG THỂ</p>', 2, '[{\"changed\": {\"fields\": [\"Title\"]}}]', 11, 1),
+(67, '2022-01-02 20:28:14.290726', '4', '<p>CHƯƠNG TRÌNH GIÁO DỤC PHỔ THÔNG TỔNG THỂ 2018<br />\r\n- CHƯƠNG TRÌNH TỔNG THỂ</p>', 2, '[{\"changed\": {\"fields\": [\"Title\"]}}]', 11, 1),
+(68, '2022-01-02 20:28:51.523822', '4', '<p>CHƯƠNG TR&Igrave;NH GI&Aacute;O DỤC PHỔ TH&Ocirc;NG&nbsp;2018<br />\r\n- CHƯƠNG TR&Igrave;NH TỔNG THỂ</p>', 2, '[{\"changed\": {\"fields\": [\"Title\"]}}]', 11, 1),
+(69, '2022-01-04 02:49:47.940511', '5', '<p>CHƯƠNG TR&Igrave;NH GI&Aacute;O DỤC PHỔ TH&Ocirc;NG 2018<br />\r\n- T&Oacute;M TẮT TỔNG THỂ</p>', 2, '[{\"changed\": {\"fields\": [\"Title\"]}}]', 11, 1),
+(70, '2022-01-04 13:56:28.183983', '1', 'Chương trình Tin Học', 1, '[{\"added\": {}}]', 34, 1),
+(71, '2022-01-04 13:56:38.116063', '2', 'Chương trình Tổng thể', 1, '[{\"added\": {}}]', 34, 1),
+(72, '2022-01-04 13:56:57.692702', '4', '<p>CHƯƠNG TR&Igrave;NH GI&Aacute;O DỤC PHỔ TH&Ocirc;NG&nbsp;2018<br />\r\n- CHƯƠNG TR&Igrave;NH TỔNG THỂ</p>', 2, '[{\"changed\": {\"fields\": [\"Categoryid\"]}}]', 11, 1),
+(73, '2022-01-04 13:57:05.323405', '5', '<p>CHƯƠNG TR&Igrave;NH GI&Aacute;O DỤC PHỔ TH&Ocirc;NG 2018<br />\r\n- T&Oacute;M TẮT TỔNG THỂ</p>', 2, '[{\"changed\": {\"fields\": [\"Categoryid\"]}}]', 11, 1),
+(74, '2022-01-04 13:57:08.612830', '6', '<p>CHƯƠNG TR&Igrave;NH GI&Aacute;O DỤC PHỔ TH&Ocirc;NG 2018<br />\r\n- CHƯƠNG TR&Igrave;NH M&Ocirc;N TIN HỌC</p>', 2, '[{\"changed\": {\"fields\": [\"Categoryid\", \"Title\"]}}]', 11, 1),
+(75, '2022-01-04 13:57:21.389777', '3', 'Mách bạn những mẹo nhỏ trong quá trình đánh máy mười ngón.', 3, '', 11, 1),
+(76, '2022-01-04 13:57:21.394606', '2', 'Chia sẻ cho bạn bí quyết học đánh máy mười ngón hiệu quả.', 3, '', 11, 1),
+(77, '2022-01-04 13:57:21.396565', '1', 'Bạn cần thời gian bao lâu để học đánh máy mười ngón?', 3, '', 11, 1),
+(78, '2022-01-04 14:09:50.861534', '1', 'Chương trình Tin Học', 1, '[{\"added\": {}}]', 34, 1),
+(79, '2022-01-04 14:09:54.924692', '2', 'Chương trình Tổng thể', 1, '[{\"added\": {}}]', 34, 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `django_content_type`
+-- Table structure for table `django_content_type`
 --
 
 CREATE TABLE `django_content_type` (
@@ -573,7 +683,7 @@ CREATE TABLE `django_content_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `django_content_type`
+-- Dumping data for table `django_content_type`
 --
 
 INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
@@ -585,6 +695,7 @@ INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
 (7, 'homepage', 'account'),
 (26, 'homepage', 'activity'),
 (25, 'homepage', 'callsign'),
+(34, 'homepage', 'category'),
 (8, 'homepage', 'character'),
 (9, 'homepage', 'competition'),
 (24, 'homepage', 'competitionbadge'),
@@ -597,6 +708,7 @@ INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
 (28, 'homepage', 'header'),
 (12, 'homepage', 'lesson'),
 (21, 'homepage', 'lessonbadge'),
+(33, 'homepage', 'lessoninstruction'),
 (13, 'homepage', 'news'),
 (14, 'homepage', 'practicebadge'),
 (15, 'homepage', 'text'),
@@ -613,7 +725,7 @@ INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `django_migrations`
+-- Table structure for table `django_migrations`
 --
 
 CREATE TABLE `django_migrations` (
@@ -624,7 +736,7 @@ CREATE TABLE `django_migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `django_migrations`
+-- Dumping data for table `django_migrations`
 --
 
 INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
@@ -673,12 +785,23 @@ INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
 (43, 'homepage', '0025_auto_20211230_1704', '2021-12-30 10:05:08.319281'),
 (44, 'homepage', '0026_gamelevel_levelorder', '2021-12-30 10:09:39.171482'),
 (45, 'homepage', '0027_auto_20220101_2309', '2022-01-01 16:10:03.720737'),
-(46, 'homepage', '0028_auto_20220102_0110', '2022-01-01 18:10:21.371611');
+(46, 'homepage', '0028_auto_20220102_0110', '2022-01-01 18:10:21.371611'),
+(47, 'homepage', '0029_trackinglevelgame_stars', '2022-01-01 18:54:14.580207'),
+(48, 'homepage', '0030_auto_20220102_0416', '2022-01-01 21:16:24.655144'),
+(49, 'homepage', '0031_document_pdf', '2022-01-02 04:35:48.070993'),
+(50, 'homepage', '0032_auto_20220102_1142', '2022-01-02 04:43:07.872973'),
+(51, 'homepage', '0033_auto_20220102_1202', '2022-01-02 05:02:17.469644'),
+(52, 'homepage', '0034_auto_20220103_0211', '2022-01-02 19:11:52.759848'),
+(53, 'homepage', '0035_document_author', '2022-01-02 19:14:36.427585'),
+(54, 'homepage', '0036_auto_20220103_0339', '2022-01-02 20:39:27.308925'),
+(55, 'homepage', '0037_auto_20220104_2053', '2022-01-04 13:53:58.651994'),
+(56, 'homepage', '0037_category', '2022-01-04 14:06:07.543972'),
+(57, 'homepage', '0037_auto_20220104_2108', '2022-01-04 14:08:52.919904');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `django_session`
+-- Table structure for table `django_session`
 --
 
 CREATE TABLE `django_session` (
@@ -688,7 +811,7 @@ CREATE TABLE `django_session` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `django_session`
+-- Dumping data for table `django_session`
 --
 
 INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
@@ -696,8 +819,8 @@ INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALU
 ('4yzrkezc5iggf5hdnozvpgq88lcmt6zj', 'e30:1mxoZG:2DvSCLOVH6iIxcaQY5yFtMROvb3JjUzeaSm2MZN-KW8', '2021-12-30 11:04:58.291127'),
 ('7ds9rj1fe9urlhnex85zxpu5s9roc6y5', '.eJxVjMEOwiAQRP-FsyHA1lo8eu83kF12K1UDSWlPxn-XJj3ocea9mbcKuK0pbFWWMLO6KqtOvx1hfEreAT8w34uOJa_LTHpX9EGrHgvL63a4fwcJa2prb8gZ10MXCYEulqAlAjGM3kfAHpzQ2XTWNEMQkAW9pYmHwSFNTn2-2rU4XQ:1mwRK0:MAk11aqb1vJfQybdGzxgLdrhYdiFQqklh4GAZAJgzPk', '2021-12-26 16:03:32.355644'),
 ('7q94wrvfy2t8wz9hwsczyomp0ppwc948', '.eJxVjMsOwiAQRf-FtSG8KS7d-w2EYQapGkhKuzL-uzbpQrf3nHNfLKZtrXEbtMQZ2ZlJwU6_I6T8oLYTvKd26zz3ti4z8F3hBx382pGel8P9O6hp1G9NVkmdvXG2SNSUJxsMTAaVTCBAWyBUwgeBXksAciRVAZczFWWDIGDvDwMoOIE:1mnd0N:Je9NubioruCC29YoKfRbRM9PClfwH-7hfpqGrfeF8Ao', '2021-12-02 08:42:51.543815'),
-('81fuf8tl8ew0jf2ed27uk627awsbtceh', '.eJxVjEEOgjAQRe_StWmmlCnUpXvPQGamU4saSCisjHdXEha6_e-9_zIDbWsZtqrLMCZzNk1rTr8jkzx02km603SbrczTuoxsd8UetNrrnPR5Ody_g0K1fGsv4iByQz22LknPiC0ioSftIMQMDJqT77QTnzMCQmCljC44yRrZvD8KBTiN:1n3i7E:NYMwXZy6OaTCKCmku7e9U8zopNaigNo6oxkwqns4dHw', '2022-01-15 17:24:24.859682'),
 ('8l6uvspb5va7hmlf5fsv41prqu8gadaw', 'e30:1mxoWQ:7Jzvz3L-ToFX-ZnD97oI30v2EZ5J0McjcbkyyRky1Us', '2021-12-30 11:02:02.781660'),
+('94ch9990miwrddbc4gsh3tuvvp9um1ip', '.eJxVjEEOgjAQRe_StWmmlCnUpXvPQGamU4saSCisjHdXEha6_e-9_zIDbWsZtqrLMCZzNk1rTr8jkzx02km603SbrczTuoxsd8UetNrrnPR5Ody_g0K1fGsv4iByQz22LknPiC0ioSftIMQMDJqT77QTnzMCQmCljC44yRrZvD8KBTiN:1n4eKd:aJVexMUSlO53NSDqcEA7p9jJAUlVVljtmm2GuQGil7U', '2022-01-18 07:34:07.010600'),
 ('bk0t58zcn7fjofvxenn2uruqaw8hecm5', '.eJxVjMEOwiAQRP-FsyHA1lo8eu83kF12K1UDSWlPxn-XJj3ocea9mbcKuK0pbFWWMLO6KqtOvx1hfEreAT8w34uOJa_LTHpX9EGrHgvL63a4fwcJa2prb8gZ10MXCYEulqAlAjGM3kfAHpzQ2XTWNEMQkAW9pYmHwSFNTn2-2rU4XQ:1mnKks:lWcb-monv48wDf_og1z4sQSw3aj264zpidVVNypJ_Lo', '2021-12-01 13:13:38.260469'),
 ('c7uj8fmcpia7u5663st70k1q6bevbvnv', '.eJxVjMEOwiAQRP-FsyHA1lo8eu83kF12K1UDSWlPxn-XJj3ocea9mbcKuK0pbFWWMLO6KqtOvx1hfEreAT8w34uOJa_LTHpX9EGrHgvL63a4fwcJa2prb8gZ10MXCYEulqAlAjGM3kfAHpzQ2XTWNEMQkAW9pYmHwSFNTn2-2rU4XQ:1mtVop:_u8c0f0k4Id-ThrWIC_qQvXyhL2JCJxFDyJunGG4URA', '2021-12-18 14:15:15.862939'),
 ('czta0ujiwiuitfetevzwe0gux1ltpg3o', '.eJxVjMEOwiAQRP-FsyHA1lo8eu83kF12K1UDSWlPxn-XJj3ocea9mbcKuK0pbFWWMLO6KqtOvx1hfEreAT8w34uOJa_LTHpX9EGrHgvL63a4fwcJa2prb8gZ10MXCYEulqAlAjGM3kfAHpzQ2XTWNEMQkAW9pYmHwSFNTn2-2rU4XQ:1n0rVA:paWvnWJseOS5yMtGgWts5jBe4FRUWbVIY7CjEcfpZsY', '2022-01-07 20:49:20.557999'),
@@ -709,7 +832,9 @@ INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALU
 ('ms5ocfqe7s6vhsbmlojr7pw2fs61rzwg', '.eJxVjEEOgjAQRe_StWmmlCnUpXvPQGamU4saSCisjHdXEha6_e-9_zIDbWsZtqrLMCZzNk1rTr8jkzx02km603SbrczTuoxsd8UetNrrnPR5Ody_g0K1fGsv4iByQz22LknPiC0ioSftIMQMDJqT77QTnzMCQmCljC44yRrZvD8KBTiN:1mxpNY:fbLmvEjl9RCThxtBLvy2WDRhHaWqfeicwYABWB2umVY', '2021-12-30 11:56:56.568755'),
 ('no6brdgl4cytov4zths5rahfzy3ee5n6', '.eJxVjEEOgjAQRe_StWmmlCnUpXvPQGamU4saSCisjHdXEha6_e-9_zIDbWsZtqrLMCZzNk1rTr8jkzx02km603SbrczTuoxsd8UetNrrnPR5Ody_g0K1fGsv4iByQz22LknPiC0ioSftIMQMDJqT77QTnzMCQmCljC44yRrZvD8KBTiN:1n2xxu:PgXvUcjGKDlAEjfJq8qRjj9XSEMYXojtDHdGhKOXOKQ', '2022-01-13 16:07:42.669144'),
 ('p72lgn5tgtwu7zgb8004zbxl47ik9eis', '.eJxVjEEOgjAQRe_StWmmlCnUpXvPQGamU4saSCisjHdXEha6_e-9_zIDbWsZtqrLMCZzNk1rTr8jkzx02km603SbrczTuoxsd8UetNrrnPR5Ody_g0K1fGsv4iByQz22LknPiC0ioSftIMQMDJqT77QTnzMCQmCljC44yRrZvD8KBTiN:1mxqYp:Yy7PcErFeF1LNTFhcBAYI-TaKYOj4LUX5IaFStiRAak', '2021-12-30 13:12:39.973177'),
+('pw7b7u8lk0ikh866c5ra5hei2w7dnryo', '.eJxVjEEOgjAQRe_StWmmlCnUpXvPQGamU4saSCisjHdXEha6_e-9_zIDbWsZtqrLMCZzNk1rTr8jkzx02km603SbrczTuoxsd8UetNrrnPR5Ody_g0K1fGsv4iByQz22LknPiC0ioSftIMQMDJqT77QTnzMCQmCljC44yRrZvD8KBTiN:1n4mcv:dVwvhkNaIy-H42WDulK9vhTgl4SbzEiz34mlVRDRfFo', '2022-01-18 16:25:33.227669'),
 ('twutz06wh4xubu7so62cd0gt4vkfiid8', 'e30:1mxoXg:CiRv_3NEEN6jTqAV2DDqBzEEbrUGv63L8ECXQMhtsfk', '2021-12-30 11:03:20.136859'),
+('ufn293lij1p8k2kaxn5ylx17fp9k9xse', '.eJxVjEEOgjAQRe_StWmmlCnUpXvPQGamU4saSCisjHdXEha6_e-9_zIDbWsZtqrLMCZzNk1rTr8jkzx02km603SbrczTuoxsd8UetNrrnPR5Ody_g0K1fGsv4iByQz22LknPiC0ioSftIMQMDJqT77QTnzMCQmCljC44yRrZvD8KBTiN:1n47Uj:2WpvZbe2J97Yjz3WzxFKTVLkHCvHJUux1Hv0TzCxJ0Q', '2022-01-16 20:30:21.639709'),
 ('utr5yd08o4t4mkh2e7yqy77go0i62hle', 'e30:1mn1wd:pO41zrUaPRKYDfNNaybwTaNByXICgKsi4fVknSBpS70', '2021-11-30 17:08:31.749705'),
 ('w3737ctm85h7g3qi2yhwmrgmbchnw33f', '.eJxVjEEOgjAQRe_StWmmlCnUpXvPQGamU4saSCisjHdXEha6_e-9_zIDbWsZtqrLMCZzNk1rTr8jkzx02km603SbrczTuoxsd8UetNrrnPR5Ody_g0K1fGsv4iByQz22LknPiC0ioSftIMQMDJqT77QTnzMCQmCljC44yRrZvD8KBTiN:1mzg3B:Vw2385XzWYXGeMVwrfFNJS6dCVAGn2TCAuBXHZ67ppo', '2022-01-04 14:23:33.879317'),
 ('wzxstjpfa3snfnwteluzud1l3vwkdm0z', '.eJxVjEEOwiAQRe_C2hAHKIJL956BDDODVA1NSrsy3l2bdKHb_977L5VwXWpau8xpZHVWENThd8xID2kb4Tu226Rpass8Zr0peqddXyeW52V3_w4q9vqtPaAzxgSmDKfCgIV9pGhCHqhYCRAxUiiWjWd_zCjWgYAN5IjdIEa9Pxt-OJg:1myArv:C6qqqMfytuaZ1vTIkBnOtTKDV8w7mjmgA0wZHYZ0-60', '2021-12-31 10:53:43.423655'),
@@ -718,34 +843,37 @@ INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALU
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `document`
+-- Table structure for table `document`
 --
 
 CREATE TABLE `document` (
   `documentid` int(11) NOT NULL,
-  `title` varchar(250) NOT NULL,
-  `image` varchar(100) NOT NULL,
+  `title` longtext NOT NULL,
+  `image` varchar(250) DEFAULT NULL,
   `description` longtext DEFAULT NULL,
   `content` longtext DEFAULT NULL,
   `createdate` date DEFAULT NULL,
   `editdate` datetime(6) DEFAULT NULL,
   `isenable` tinyint(1) DEFAULT NULL,
-  `note` longtext DEFAULT NULL
+  `note` longtext DEFAULT NULL,
+  `pdf` varchar(250) DEFAULT NULL,
+  `author` varchar(250) DEFAULT NULL,
+  `categoryid_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `document`
+-- Dumping data for table `document`
 --
 
-INSERT INTO `document` (`documentid`, `title`, `image`, `description`, `content`, `createdate`, `editdate`, `isenable`, `note`) VALUES
-(1, 'Bạn cần thời gian bao lâu để học đánh máy mười ngón?', 'documents/bee5.png', '', '<p>Bạn h&atilde;y nhớ c&acirc;u n&oacute;i &quot;C&oacute; c&ocirc;ng m&agrave;i sắt c&oacute; ng&agrave;y n&ecirc;n kim&quot;. Thế n&ecirc;n việc học đ&aacute;nh m&aacute;y mười ng&oacute;n phụ thuộc v&agrave;o bản th&acirc;n của bạn. Việc r&egrave;n luyện v&agrave; thực h&agrave;nh đ&aacute;nh m&aacute;y thường xuy&ecirc;n cũng rất quan trọng. Để đạt được kết quả tốt, bạn n&ecirc;n đặt ra mục ti&ecirc;u thực hiện một b&agrave;i học trong một ng&agrave;y. Bạn h&atilde;y ghi nhớ vị tr&iacute; tất cả c&aacute;c chữ c&aacute;i kh&ocirc;ng c&oacute; nghĩa l&agrave; bạn đ&atilde; sẵn s&agrave;ng để c&oacute; thể đ&aacute;nh m&aacute;y nhanh. Ng&oacute;n tay của bạn cần dần dần nhớ được c&aacute;c mẫu chuyển động hay c&ograve;n gọi l&agrave; phản xạ chuyển động c&oacute; điều kiện về vị tr&iacute; của mỗi ph&iacute;m cụ thể, m&agrave; kh&ocirc;ng cần suy nghĩ về c&aacute;c ph&iacute;m hoặc nh&igrave;n xuống b&agrave;n ph&iacute;m. Khả năng phản xạ tự động di chuyển n&agrave;y được h&igrave;nh th&agrave;nh th&ocirc;ng qua việc r&egrave;n luyện đ&aacute;nh m&aacute;y nhiều lần lặp đi lặp lại. Bạn h&atilde;y nhớ c&acirc;u n&oacute;i &quot;C&oacute; c&ocirc;ng m&agrave;i sắt c&oacute; ng&agrave;y n&ecirc;n kim&quot;. Thế n&ecirc;n việc học đ&aacute;nh m&aacute;y mười ng&oacute;n phụ thuộc v&agrave;o bản th&acirc;n của bạn. Việc r&egrave;n luyện v&agrave; thực h&agrave;nh đ&aacute;nh m&aacute;y thường xuy&ecirc;n cũng rất quan trọng. Để đạt được kết quả tốt, bạn n&ecirc;n đặt ra mục ti&ecirc;u thực hiện một b&agrave;i học trong một ng&agrave;y. Bạn h&atilde;y ghi nhớ vị tr&iacute; tất cả c&aacute;c chữ c&aacute;i kh&ocirc;ng c&oacute; nghĩa l&agrave; bạn đ&atilde; sẵn s&agrave;ng để c&oacute; thể đ&aacute;nh m&aacute;y nhanh. Ng&oacute;n tay của bạn cần dần dần nhớ được c&aacute;c mẫu chuyển động hay c&ograve;n gọi l&agrave; phản xạ chuyển động c&oacute; điều kiện về vị tr&iacute; của mỗi ph&iacute;m cụ thể, m&agrave; kh&ocirc;ng cần suy nghĩ về c&aacute;c ph&iacute;m hoặc nh&igrave;n xuống b&agrave;n ph&iacute;m. Khả năng phản xạ tự động di chuyển n&agrave;y được h&igrave;nh th&agrave;nh th&ocirc;ng qua việc r&egrave;n luyện đ&aacute;nh m&aacute;y nhiều lần lặp đi lặp lại. Bạn h&atilde;y nhớ c&acirc;u n&oacute;i &quot;C&oacute; c&ocirc;ng m&agrave;i sắt c&oacute; ng&agrave;y n&ecirc;n kim&quot;. Thế n&ecirc;n việc học đ&aacute;nh m&aacute;y mười ng&oacute;n phụ thuộc v&agrave;o bản th&acirc;n của bạn. Việc r&egrave;n luyện v&agrave; thực h&agrave;nh đ&aacute;nh m&aacute;y thường xuy&ecirc;n cũng rất quan trọng. Để đạt được kết quả tốt, bạn n&ecirc;n đặt ra mục ti&ecirc;u thực hiện một b&agrave;i học trong một ng&agrave;y. Bạn h&atilde;y ghi nhớ vị tr&iacute; tất cả c&aacute;c chữ c&aacute;i kh&ocirc;ng c&oacute; nghĩa l&agrave; bạn đ&atilde; sẵn s&agrave;ng để c&oacute; thể đ&aacute;nh m&aacute;y nhanh. Ng&oacute;n tay của bạn cần dần dần nhớ được c&aacute;c mẫu chuyển động hay c&ograve;n gọi l&agrave; phản xạ chuyển động c&oacute; điều kiện về vị tr&iacute; của mỗi ph&iacute;m cụ thể, m&agrave; kh&ocirc;ng cần suy nghĩ về c&aacute;c ph&iacute;m hoặc nh&igrave;n xuống b&agrave;n ph&iacute;m. Khả năng phản xạ tự động di chuyển n&agrave;y được h&igrave;nh th&agrave;nh th&ocirc;ng qua việc r&egrave;n luyện đ&aacute;nh m&aacute;y nhiều lần lặp đi lặp lại. Bạn h&atilde;y nhớ c&acirc;u n&oacute;i &quot;C&oacute; c&ocirc;ng m&agrave;i sắt c&oacute; ng&agrave;y n&ecirc;n kim&quot;. Thế n&ecirc;n việc học đ&aacute;nh m&aacute;y mười ng&oacute;n phụ thuộc v&agrave;o bản th&acirc;n của bạn. Việc r&egrave;n luyện v&agrave; thực h&agrave;nh đ&aacute;nh m&aacute;y thường xuy&ecirc;n cũng rất quan trọng. Để đạt được kết quả tốt, bạn n&ecirc;n đặt ra mục ti&ecirc;u thực hiện một b&agrave;i học trong một ng&agrave;y. Bạn h&atilde;y ghi nhớ vị tr&iacute; tất cả c&aacute;c chữ c&aacute;i kh&ocirc;ng c&oacute; nghĩa l&agrave; bạn đ&atilde; sẵn s&agrave;ng để c&oacute; thể đ&aacute;nh m&aacute;y nhanh. Ng&oacute;n tay của bạn cần dần dần nhớ được c&aacute;c mẫu chuyển động hay c&ograve;n gọi l&agrave; phản xạ chuyển động c&oacute; điều kiện về vị tr&iacute; của mỗi ph&iacute;m cụ thể, m&agrave; kh&ocirc;ng cần suy nghĩ về c&aacute;c ph&iacute;m hoặc nh&igrave;n xuống b&agrave;n ph&iacute;m. Khả năng phản xạ tự động di chuyển n&agrave;y được h&igrave;nh th&agrave;nh th&ocirc;ng qua việc r&egrave;n luyện đ&aacute;nh m&aacute;y nhiều lần lặp đi lặp lại. Bạn h&atilde;y nhớ c&acirc;u n&oacute;i &quot;C&oacute; c&ocirc;ng m&agrave;i sắt c&oacute; ng&agrave;y n&ecirc;n kim&quot;. Thế n&ecirc;n việc học đ&aacute;nh m&aacute;y mười ng&oacute;n phụ thuộc v&agrave;o bản th&acirc;n của bạn. Việc r&egrave;n luyện v&agrave; thực h&agrave;nh đ&aacute;nh m&aacute;y thường xuy&ecirc;n cũng rất quan trọng. Để đạt được kết quả tốt, bạn n&ecirc;n đặt ra mục ti&ecirc;u thực hiện một b&agrave;i học trong một ng&agrave;y. Bạn h&atilde;y ghi nhớ vị tr&iacute; tất cả c&aacute;c chữ c&aacute;i kh&ocirc;ng c&oacute; nghĩa l&agrave; bạn đ&atilde; sẵn s&agrave;ng để c&oacute; thể đ&aacute;nh m&aacute;y nhanh. Ng&oacute;n tay của bạn cần dần dần nhớ được c&aacute;c mẫu chuyển động hay c&ograve;n gọi l&agrave; phản xạ chuyển động c&oacute; điều kiện về vị tr&iacute; của mỗi ph&iacute;m cụ thể, m&agrave; kh&ocirc;ng cần suy nghĩ về c&aacute;c ph&iacute;m hoặc nh&igrave;n xuống b&agrave;n ph&iacute;m. Khả năng phản xạ tự động di chuyển n&agrave;y được h&igrave;nh th&agrave;nh th&ocirc;ng qua việc r&egrave;n luyện đ&aacute;nh m&aacute;y nhiều lần lặp đi lặp lại. Bạn h&atilde;y nhớ c&acirc;u n&oacute;i &quot;C&oacute; c&ocirc;ng m&agrave;i sắt c&oacute; ng&agrave;y n&ecirc;n kim&quot;. Thế n&ecirc;n việc học đ&aacute;nh m&aacute;y mười ng&oacute;n phụ thuộc v&agrave;o bản th&acirc;n của bạn. Việc r&egrave;n luyện v&agrave; thực h&agrave;nh đ&aacute;nh m&aacute;y thường xuy&ecirc;n cũng rất quan trọng. Để đạt được kết quả tốt, bạn n&ecirc;n đặt ra mục ti&ecirc;u thực hiện một b&agrave;i học trong một ng&agrave;y. Bạn h&atilde;y ghi nhớ vị tr&iacute; tất cả c&aacute;c chữ c&aacute;i kh&ocirc;ng c&oacute; nghĩa l&agrave; bạn đ&atilde; sẵn s&agrave;ng để c&oacute; thể đ&aacute;nh m&aacute;y nhanh. Ng&oacute;n tay của bạn cần dần dần nhớ được c&aacute;c mẫu chuyển động hay c&ograve;n gọi l&agrave; phản xạ chuyển động c&oacute; điều kiện về vị tr&iacute; của mỗi ph&iacute;m cụ thể, m&agrave; kh&ocirc;ng cần suy nghĩ về c&aacute;c ph&iacute;m hoặc nh&igrave;n xuống b&agrave;n ph&iacute;m. Khả năng phản xạ tự động di chuyển n&agrave;y được h&igrave;nh th&agrave;nh th&ocirc;ng qua việc r&egrave;n luyện đ&aacute;nh m&aacute;y nhiều lần lặp đi lặp lại.</p>', '2021-11-17', '2021-12-12 16:06:27.707323', 1, ''),
-(2, 'Chia sẻ cho bạn bí quyết học đánh máy mười ngón hiệu quả.', 'documents/bee2.png', '', '<p>1) Quyết định rằng bạn cần ph&aacute;t triển c&aacute;c kỹ năng của m&igrave;nh (hoặc l&agrave; học c&aacute;ch chạm v&agrave;o loại, để học bơi nhanh hoặc thậm ch&iacute; học lịch sử tiếng Anh) l&agrave; sự khởi đầu của cuộc h&agrave;nh tr&igrave;nh của bạn. Bạn phải n&oacute;i với ch&iacute;nh m&igrave;nh -tại sao bạn cần n&oacute; v&agrave; lợi &iacute;ch của n&oacute; l&agrave; g&igrave;? Mục ti&ecirc;u của bạn l&agrave; g&igrave;? Tại sao những c&acirc;u hỏi n&agrave;y lại quan trọng m&agrave; bạn c&oacute; thể hỏi? Bất cứ khi n&agrave;o một người bắt đầu một sở th&iacute;ch mới hoặc, v&iacute; dụ, bắt đầu học một m&ocirc;n học mới ở trường, họ c&oacute; thể cảm thấy thất vọng hoặc lo lắng, bởi v&igrave; sự khởi đầu c&oacute; thể kh&ocirc;ng dễ d&agrave;ng. Bạn c&oacute; thể vui v&igrave; bắt đầu một điều g&igrave; đ&oacute; mới, nhưng bạn cũng c&oacute; thể buồn khi trải qua những kh&oacute; khăn đầu ti&ecirc;n. Đ&oacute; l&agrave; b&igrave;nh thường! Ngo&agrave;i ra, đặt mục ti&ecirc;u c&oacute; thể đo lường được (v&iacute; dụ: số từ mỗi ph&uacute;t *) l&agrave; rất quan trọng trong mọi lĩnh vực - kinh doanh, thể thao hoặc gi&aacute;o dục. V&igrave; vậy, nếu bạn đ&atilde; viết ra mục ti&ecirc;u v&agrave; lợi &iacute;ch của m&igrave;nh, bạn c&oacute; thể đọc lại ch&uacute;ng nhiều lần khi mất động lực. C&oacute;, bạn c&oacute; thể l&agrave; người trợ gi&uacute;p tốt nhất cho ch&iacute;nh m&igrave;nh! * Từ mỗi ph&uacute;t trong b&agrave;i kiểm tra tốc độ c&oacute; nghĩa l&agrave; - bạn c&oacute; thể viết bao nhi&ecirc;u từ mỗi ph&uacute;t. 1 từ = 5 chữ c&aacute;i bao gồm khoảng trắng v&agrave; k&yacute; hiệu. 2) Thiết lập lịch tr&igrave;nh. Trừ khi bạn lập thời gian biểu cho việc học, nếu kh&ocirc;ng bạn sẽ rất dễ kiếm cớ để kh&ocirc;ng luyện tập. H&atilde;y l&agrave; người cố vấn v&agrave; gi&aacute;m s&aacute;t của ch&iacute;nh bạn. Nhiều trường học đang sử dụng c&aacute;c c&ocirc;ng cụ đ&aacute;nh m&aacute;y bằng cảm ứng trong c&ocirc;ng việc h&agrave;ng ng&agrave;y của họ. Họ cũng c&oacute; một lịch tr&igrave;nh m&agrave; họ phải tu&acirc;n thủ nghi&ecirc;m ngặt. H&atilde;y tưởng tượng bạn quay trở lại những ng&agrave;y bạn c&ograve;n l&agrave; một đứa trẻ v&agrave; thực hiện nghi&ecirc;m t&uacute;c thời gian biểu m&agrave; bạn đ&atilde; thực hiện. V&igrave; vậy, h&atilde;y b&aacute;m v&agrave;o n&oacute;! Trước khi bạn bắt đầu qu&aacute; tr&igrave;nh học tập của m&igrave;nh, h&atilde;y quyết định một số h&igrave;nh phạt h&agrave;i hước m&agrave; bạn c&oacute; thể l&agrave;m, v&igrave; vậy bạn sẽ kh&ocirc;ng muốn bỏ lỡ một b&agrave;i học n&agrave;o nữa. 3) Để t&igrave;m hiểu xem bạn c&oacute; đang tiến bộ hay kh&ocirc;ng, trước ti&ecirc;n bạn phải t&igrave;m ra vị tr&iacute; hiện tại bạn đang đứng. H&atilde;y l&agrave;m b&agrave;i kiểm tra tốc độ v&agrave; l&agrave;m tốt nhất c&oacute; thể. Đừng lo lắng nếu bạn kh&ocirc;ng h&agrave;i l&ograve;ng về kết quả. Bạn đang ở đ&acirc;y để t&igrave;m hiểu! V&agrave; h&atilde;y nhớ rằng kết quả bạn đang gặp phải c&agrave;ng tệ th&igrave; c&agrave;ng c&oacute; nhiều kh&ocirc;ng gian cho sự ph&aacute;t triển của bạn! Ghi lại kết quả kiểm tra tốc độ của bạn hoặc tạo t&agrave;i khoản trong TypingStudy để bạn c&oacute; thể theo d&otilde;i tiến tr&igrave;nh của m&igrave;nh bằng c&aacute;ch kiểm tra lịch sử hoạt động của m&igrave;nh. 4) L&agrave;m từng b&agrave;i một . N&ecirc;n l&agrave;m 1 b&agrave;i đầy đủ mỗi ng&agrave;y. Sau mỗi b&agrave;i học, bạn n&ecirc;n l&agrave;m b&agrave;i kiểm tra tốc độ. Nếu bạn cảm thấy m&igrave;nh kh&ocirc;ng thể l&agrave;m được nhiều việc mỗi ng&agrave;y, bạn c&oacute; thể chọn c&aacute;c tr&ograve; chơi đ&aacute;nh m&aacute;y để l&agrave;m cho qu&aacute; tr&igrave;nh học tập trở n&ecirc;n vui vẻ hơn. Nếu bạn chọn chơi tr&ograve; chơi đ&aacute;nh m&aacute;y, ch&uacute;ng t&ocirc;i khuy&ecirc;n bạn n&ecirc;n chọn cấp độ theo b&agrave;i học bạn đang l&agrave;m, tức l&agrave; - nếu bạn đang l&agrave;m b&agrave;i 1, h&atilde;y chọn cấp độ 1 trong phần chơi tr&ograve; chơi, nếu bạn đang l&agrave;m b&agrave;i học 2, h&atilde;y chọn cấp độ 2 v&agrave; Sớm. Vui l&ograve;ng đảm bảo bạn c&oacute; &iacute;t nhất 30 ph&uacute;t cho mỗi b&agrave;i học. 5) Đo lường sự tiến bộ của ch&iacute;nh bạn. Bạn c&oacute; cảm thấy an to&agrave;n hơn l&uacute;c ban đầu kh&ocirc;ng? Bạn c&oacute; thể g&otilde; m&agrave; kh&ocirc;ng cần nh&igrave;n tr&ecirc;n b&agrave;n ph&iacute;m? Kết quả của b&agrave;i kiểm tra tốc độ c&oacute; tốt hơn kh&ocirc;ng? Bộ nhớ cơ bắp của bạn đ&atilde; hoạt động chưa? Nếu bạn c&oacute; thể trả lời C&Oacute; cho tất cả c&aacute;c c&acirc;u hỏi, bạn đang l&agrave;m rất tốt. Nếu KH&Ocirc;NG, h&atilde;y tiếp tục luyện tập. 6) T&iacute;nh bền bỉ.Chỉ c&oacute; thực h&agrave;nh mới tạo n&ecirc;n sự ho&agrave;n hảo. Kh&ocirc;ng c&oacute; c&aacute;ch kỳ diệu n&agrave;o để đ&aacute;nh m&aacute;y ho&agrave;n hảo trong 5 ph&uacute;t hoặc 5 ng&agrave;y. Ki&ecirc;n tr&igrave; l&agrave; điều tốt l&agrave;m n&ecirc;n xuất sắc! Cố gắng mời bạn b&egrave; hoặc gia đ&igrave;nh của bạn tham gia c&ugrave;ng bạn. Bạn thậm ch&iacute; c&oacute; thể cạnh tranh với nhau trong một b&agrave;i kiểm tra tốc độ hoặc c&aacute;c tr&ograve; chơi đ&aacute;nh m&aacute;y c&oacute; sẵn! Sự lựa chọn l&agrave; v&agrave;o bạn. Tuy nhi&ecirc;n, đừng t&igrave;m l&yacute; do để ngăn cản bước tiến của bản th&acirc;n. Ngay cả khi kh&ocirc;ng ai muốn tham gia c&ugrave;ng bạn, điều đ&oacute; kh&ocirc;ng quan trọng - bạn l&agrave; kẻ đ&agrave;o bới hạnh ph&uacute;c của ch&iacute;nh m&igrave;nh. H&atilde;y nhớ rằng, khi bạn nhập văn bản bằng c&aacute;ch chạm, bạn cũng c&oacute; thể học bằng c&aacute;ch thực hiện - sử dụng mạng x&atilde; hội hoặc Skype để tr&ograve; chuyện với bạn b&egrave; v&agrave; gia đ&igrave;nh của bạn. Bạn sẽ nhận thấy rằng sự tiến bộ đến nhanh ch&oacute;ng. 7) Kh&ocirc;ng c&oacute; g&igrave; ngọt ng&agrave;o hơn hương vị của chiến thắng! Khi bạn thấy rằng bạn đ&atilde; đạt được mục ti&ecirc;u của m&igrave;nh, bạn biết rằng n&oacute; rất đ&aacute;ng để cố gắng. Tuy nhi&ecirc;n, nếu bạn đ&atilde; đạt được mục ti&ecirc;u, nhưng bạn vẫn kh&ocirc;ng cảm thấy h&agrave;i l&ograve;ng về kết quả, bạn c&oacute; thể đặt mục ti&ecirc;u mới. Thử th&aacute;ch bản th&acirc;n!</p>', '2021-11-17', '2021-12-12 16:06:14.449388', 1, ''),
-(3, 'Mách bạn những mẹo nhỏ trong quá trình đánh máy mười ngón.', 'documents/bee.png', '', '<p>C&aacute;c em h&atilde;y nhớ giữ c&aacute;c ng&oacute;n tay c&agrave;ng gần vị tr&iacute; h&agrave;ng ph&iacute;m ch&iacute;nh c&agrave;ng tốt v&agrave; giảm thiểu di chuyển b&agrave;n tay trong khi học. C&aacute;c b&agrave;i tập phối hợp ng&oacute;n tay sẽ gi&uacute;p giảm căng thẳng v&agrave; thường gi&uacute;p c&aacute;c em lu&ocirc;n vui vẻ. Một m&ocirc;i trường l&agrave;nh mạnh v&agrave; thoải m&aacute;i c&oacute; thể gi&uacute;p cho việc học trở n&ecirc;n th&uacute; vị hơn nhiều. C&agrave;ng thực h&agrave;nh nhiều, c&aacute;c em sẽ c&agrave;ng g&otilde; tốt hơn v&agrave; tốc độ nhanh hơn. Nếu c&oacute; thể, h&atilde;y thử thực h&agrave;nh tr&ecirc;n một b&agrave;n ph&iacute;m th&ocirc;ng thường, kh&ocirc;ng phải b&agrave;n ph&iacute;m m&aacute;y t&iacute;nh. Trước khi bắt đầu kiểm tra tốc độ đ&aacute;nh m&aacute;y, h&atilde;y chắc chắn rằng c&aacute;c em đang ngồi thẳng, hai ch&acirc;n đặt thẳng tr&ecirc;n s&agrave;n nh&agrave;. Kh&eacute;p khuỷu tay s&aacute;t người, để cổ tay thẳng v&agrave; cẳng tay c&acirc;n bằng v&agrave; nhớ thường xuy&ecirc;n nghỉ ngơi. C&aacute;c em h&atilde;y nhớ giữ c&aacute;c ng&oacute;n tay c&agrave;ng gần vị tr&iacute; h&agrave;ng ph&iacute;m ch&iacute;nh c&agrave;ng tốt v&agrave; giảm thiểu di chuyển b&agrave;n tay trong khi học. C&aacute;c b&agrave;i tập phối hợp ng&oacute;n tay sẽ gi&uacute;p giảm căng thẳng v&agrave; thường gi&uacute;p c&aacute;c em lu&ocirc;n vui vẻ. Một m&ocirc;i trường l&agrave;nh mạnh v&agrave; thoải m&aacute;i c&oacute; thể gi&uacute;p cho việc học trở n&ecirc;n th&uacute; vị hơn nhiều. C&agrave;ng thực h&agrave;nh nhiều, c&aacute;c em sẽ c&agrave;ng g&otilde; tốt hơn v&agrave; tốc độ nhanh hơn. Nếu c&oacute; thể, h&atilde;y thử thực h&agrave;nh tr&ecirc;n một b&agrave;n ph&iacute;m th&ocirc;ng thường, kh&ocirc;ng phải b&agrave;n ph&iacute;m m&aacute;y t&iacute;nh. Trước khi bắt đầu kiểm tra tốc độ đ&aacute;nh m&aacute;y, h&atilde;y chắc chắn rằng c&aacute;c em đang ngồi thẳng, hai ch&acirc;n đặt thẳng tr&ecirc;n s&agrave;n nh&agrave;. Kh&eacute;p khuỷu tay s&aacute;t người, để cổ tay thẳng v&agrave; cẳng tay c&acirc;n bằng v&agrave; nhớ thường xuy&ecirc;n nghỉ ngơi.</p>', '2021-11-17', '2021-12-12 16:06:06.124915', 1, '');
+INSERT INTO `document` (`documentid`, `title`, `image`, `description`, `content`, `createdate`, `editdate`, `isenable`, `note`, `pdf`, `author`, `categoryid_id`) VALUES
+(4, '<p>CHƯƠNG TR&Igrave;NH GI&Aacute;O DỤC PHỔ TH&Ocirc;NG&nbsp;2018<br />\r\n- CHƯƠNG TR&Igrave;NH TỔNG THỂ</p>', 'CTGDPT-2018-Tong-the.png', '', '', '2022-01-02', '2022-01-04 13:56:57.690697', 1, '', 'CTGDPT-2018-Tong-the.pdf', 'Huỳnh Ngọc Tuyết', 2),
+(5, '<p>CHƯƠNG TR&Igrave;NH GI&Aacute;O DỤC PHỔ TH&Ocirc;NG 2018<br />\r\n- T&Oacute;M TẮT TỔNG THỂ</p>', 'CTGDPT-2018-Tom-tat-tong-the.png', '', '', '2022-01-02', '2022-01-04 13:57:05.321408', 1, '', 'CTGDPT-2018-Tom-tat-tong-the.pdf', 'Huỳnh Ngọc Tuyết', 2),
+(6, '<p>CHƯƠNG TR&Igrave;NH GI&Aacute;O DỤC PHỔ TH&Ocirc;NG 2018<br />\r\n- CHƯƠNG TR&Igrave;NH M&Ocirc;N TIN HỌC</p>', 'CTGDPT-2018-mon-Tin-hoc.png', '', '', '2022-01-03', '2022-01-04 13:57:08.610939', 1, '', 'CTGDPT-2018-mon-Tin-hoc.pdf', 'Huỳnh Ngọc Tuyết', 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `faq`
+-- Table structure for table `faq`
 --
 
 CREATE TABLE `faq` (
@@ -759,7 +887,7 @@ CREATE TABLE `faq` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `faq`
+-- Dumping data for table `faq`
 --
 
 INSERT INTO `faq` (`faqid`, `question`, `answer`, `createdate`, `editdate`, `isenable`, `note`) VALUES
@@ -775,7 +903,7 @@ INSERT INTO `faq` (`faqid`, `question`, `answer`, `createdate`, `editdate`, `ise
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `game`
+-- Table structure for table `game`
 --
 
 CREATE TABLE `game` (
@@ -794,7 +922,7 @@ CREATE TABLE `game` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `game`
+-- Dumping data for table `game`
 --
 
 INSERT INTO `game` (`gameid`, `gameorder`, `name`, `image`, `description`, `link`, `stars`, `createdate`, `editdate`, `isenable`, `note`, `topicpracticeid_id`) VALUES
@@ -808,7 +936,7 @@ INSERT INTO `game` (`gameid`, `gameorder`, `name`, `image`, `description`, `link
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `gamelevel`
+-- Table structure for table `gamelevel`
 --
 
 CREATE TABLE `gamelevel` (
@@ -826,7 +954,7 @@ CREATE TABLE `gamelevel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `gamelevel`
+-- Dumping data for table `gamelevel`
 --
 
 INSERT INTO `gamelevel` (`levelid`, `name`, `image`, `link`, `stars`, `createdate`, `editdate`, `isenable`, `note`, `gameid_id`, `levelorder`) VALUES
@@ -840,37 +968,14 @@ INSERT INTO `gamelevel` (`levelid`, `name`, `image`, `link`, `stars`, `createdat
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `header`
---
-
-CREATE TABLE `header` (
-  `headerid` int(11) NOT NULL,
-  `name` varchar(250) DEFAULT NULL,
-  `link` varchar(250) DEFAULT NULL,
-  `createdate` date DEFAULT NULL,
-  `editdate` datetime(6) DEFAULT NULL,
-  `isenable` tinyint(1) DEFAULT NULL,
-  `note` longtext DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Đang đổ dữ liệu cho bảng `header`
---
-
-INSERT INTO `header` (`headerid`, `name`, `link`, `createdate`, `editdate`, `isenable`, `note`) VALUES
-(1, 'Trang Chủ', '\'homepage:index\'', '2021-11-18', '2021-11-18 09:48:46.000000', 1, NULL);
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `lesson`
+-- Table structure for table `lesson`
 --
 
 CREATE TABLE `lesson` (
   `lessonid` int(11) NOT NULL,
   `lessonorder` int(11) DEFAULT NULL,
   `name` varchar(250) DEFAULT NULL,
-  `image` varchar(100) DEFAULT NULL,
+  `image` varchar(250) DEFAULT NULL,
   `description` longtext DEFAULT NULL,
   `stars` int(11) DEFAULT NULL,
   `createdate` date DEFAULT NULL,
@@ -881,7 +986,7 @@ CREATE TABLE `lesson` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `lesson`
+-- Dumping data for table `lesson`
 --
 
 INSERT INTO `lesson` (`lessonid`, `lessonorder`, `name`, `image`, `description`, `stars`, `createdate`, `editdate`, `isenable`, `note`, `topiclessonid_id`) VALUES
@@ -901,12 +1006,13 @@ INSERT INTO `lesson` (`lessonid`, `lessonorder`, `name`, `image`, `description`,
 (14, 14, 'ÔN TẬP 3', 'media/lessons/images/lesson14.PNG', 'Ôn tập hàng phím dưới', 3, '2021-11-02', '2021-11-02 00:33:04.000000', 1, '', 4),
 (15, 15, 'PHÍM SỐ', '', 'Học gõ phím số', 3, '2021-11-05', '2021-11-05 15:08:37.000000', 1, '', 5),
 (16, 16, 'PHÍM CHỨC NĂNG', '', 'Học một số phím chức năng', 3, '2021-11-05', '2021-11-05 15:08:37.000000', 1, '', 6),
-(17, 17, 'HỌC GÕ TIẾNG VIỆT', '', 'Học gõ tiếng Việt có dấu', 3, '2021-11-05', '2021-11-05 15:08:37.000000', 1, '', 7);
+(17, 17, 'GÕ TIẾNG VIỆT KIỂU TELEX', '', 'Học gõ tiếng Việt có dấu', 3, '2021-11-05', '2021-11-05 15:08:37.000000', 1, '', 7),
+(18, 18, 'GÕ TIẾNG VIỆT KIỂU VNI', '', 'Học gõ tiếng Việt có dấu', 3, '2021-11-05', '2021-11-05 15:08:37.000000', 1, '', 7);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lessonbadge`
+-- Table structure for table `lessonbadge`
 --
 
 CREATE TABLE `lessonbadge` (
@@ -925,7 +1031,7 @@ CREATE TABLE `lessonbadge` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lessonbadge_own`
+-- Table structure for table `lessonbadge_own`
 --
 
 CREATE TABLE `lessonbadge_own` (
@@ -937,36 +1043,56 @@ CREATE TABLE `lessonbadge_own` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `news`
+-- Table structure for table `lessoninstruction`
+--
+
+CREATE TABLE `lessoninstruction` (
+  `lessoninstructionid` int(11) NOT NULL,
+  `name` varchar(250) DEFAULT NULL,
+  `video` varchar(250) DEFAULT NULL,
+  `album` varchar(250) DEFAULT NULL,
+  `content` longtext DEFAULT NULL,
+  `createdate` date DEFAULT NULL,
+  `editdate` datetime(6) DEFAULT NULL,
+  `isenable` tinyint(1) DEFAULT NULL,
+  `note` longtext DEFAULT NULL,
+  `lessonid_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `news`
 --
 
 CREATE TABLE `news` (
   `newsid` int(11) NOT NULL,
   `title` varchar(250) NOT NULL,
-  `image` varchar(100) NOT NULL,
+  `image` varchar(250) DEFAULT NULL,
   `description` longtext DEFAULT NULL,
   `content` longtext DEFAULT NULL,
   `createdate` date DEFAULT NULL,
   `editdate` datetime(6) DEFAULT NULL,
   `isenable` tinyint(1) DEFAULT NULL,
-  `note` longtext DEFAULT NULL
+  `note` longtext DEFAULT NULL,
+  `author` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `news`
+-- Dumping data for table `news`
 --
 
-INSERT INTO `news` (`newsid`, `title`, `image`, `description`, `content`, `createdate`, `editdate`, `isenable`, `note`) VALUES
-(1, 'Tốc độ đánh máy chuẩn', 'news/background3.png', '', '<p>từ n&agrave;y. Khả năng g&otilde; ph&iacute;m hay được viết tắt l&agrave; WPM ( word per min) t&iacute;nh theo tiếng anh. Được chia l&agrave;m 4 cấp độ + Tốc độ đ&aacute;nh m&aacute;y thấp: Dưới 60WPM + Tốc độ đ&aacute;nh m&aacute;y trung b&igrave;nh: Từ 60 đến 100 WPM + Tốc độ đ&aacute;nh m&aacute;y cao: Từ 100 WPM đến 140WPM. + Tốc độ đ&aacute;nh m&aacute;y chuy&ecirc;n nghiệp: Tr&ecirc;n 140WPM</p>', '2021-11-17', '2021-12-12 16:05:21.590387', 1, ''),
-(2, 'Vệ sinh bàn phím thường xuyên', 'news/bee4.png', '', '<p>B&agrave;n ph&iacute;m bẩn gấp 5 lần nh&agrave; vệ sinh Kh&ocirc;ng nhiều người d&ugrave;ng c&oacute; th&oacute;i quen vệ sinh b&agrave;n ph&iacute;m thường xuy&ecirc;n, khiến c&aacute;c chất bẩn như t&oacute;c, da chết v&agrave; nhiều loại vi khuẩn từ tay bạn bị b&aacute;m lại tr&ecirc;n b&agrave;n ph&iacute;m. Đ&oacute; l&agrave; l&yacute; do b&agrave;n ph&iacute;m n&ecirc;n được vệ sinh v&agrave;i th&aacute;ng 1 lần. H&agrave;ng ng&agrave;y hầu hết ch&uacute;ng ta đều đ&aacute;nh m&aacute;y rất nhiều, mồ h&ocirc;i v&agrave; những chất bất, vi khuẩn c&oacute; thể từ ch&uacute;ng ta tăng th&ecirc;m l&ecirc;n b&agrave;n ph&iacute;m v&agrave; cũng ngược lại. Do vậy lời khuy&ecirc;n l&agrave; lu&ocirc;n rửa tay khi rời khỏi b&agrave;n ph&iacute;m. Nhất l&agrave; c&aacute;c bạn văn ph&ograve;ng , đang ngồi m&agrave; c&oacute; đồ ăn vặt bốc tay lu&ocirc;n l&agrave; rất kh&ocirc;ng tốt.</p>', '2021-11-17', '2021-12-12 16:05:05.439754', 1, ''),
-(3, 'Nước nào đánh máy khó nhất', 'news/bee3.png', '', '<p>Bạn đ&atilde; bao giờ hỏi m&igrave;nh l&agrave; : &ldquo;Tiếng việt g&otilde; thật đơn giản. Thế với những k&yacute; tự loằng ngoằng như chữ Nhật, Trung th&igrave; b&agrave;n ph&iacute;m g&otilde; kiểu g&igrave; &rdquo; kh&ocirc;ng ? Sự thật l&agrave; 2 quốc gia tr&ecirc;n c&oacute; bộ g&otilde; kh&oacute; nhất thế giới. Cũng sử dụng b&agrave;n ph&iacute;m bố tr&iacute; QWERTY, nhưng khi ấn ph&iacute;m bạn cần hiểu phi&ecirc;n bản chữ Latinh của chữ cần nhập hoặc chỉ nhập c&aacute;c k&yacute; tự đơn giản, chắp nối. Sau đ&oacute; lại cần nh&igrave;n v&agrave; thay đổi n&oacute; th&agrave;nh từ đ&uacute;ng với ng&ocirc;n ngữ Trung hoặc Nhật ( chọn lại tr&ecirc;n m&agrave;n h&igrave;nh). Thực sự việc đ&aacute;nh m&aacute;y ở những nước n&agrave;y cần khổ luyện rất nhiều, ki&ecirc;n nhẫn v&agrave; đầy rẫy kh&oacute; khăn. Đặc biệt tiếng Trung v&igrave; bạn cũng biết đ&oacute;, chỉ hơn k&eacute;m nhau 1 t&yacute; về độ d&agrave;i n&eacute;t th&ocirc;i cũng đ&atilde; th&agrave;nh 1 chữ kh&aacute;c rồi. Ch&iacute;nh v&igrave; vậy tất nhi&ecirc;n hai nước n&agrave;y cũng c&oacute; mặt trong danh s&aacute;ch những b&agrave;n ph&iacute;m phức tạp nhất thế giới. V&igrave; c&oacute; qu&aacute; nhiều ng&ocirc;n ngữ tr&ecirc;n c&ugrave;ng 1 b&agrave;n ph&iacute;m hoặc bảng chữ c&aacute;i c&oacute; h&agrave;ng trăm k&yacute; tự v&agrave; sẽ được thể hiện bằng c&aacute;c tổ hợp ph&iacute;m. V&iacute; dụ Th&aacute;i Lan, H&agrave;n Quốc, Ấn Độ. Tất nhi&ecirc;n l&agrave; cả 2 nước vừa n&oacute;i ph&iacute;a tr&ecirc;n. C&aacute;c b&agrave;n phim của c&aacute;c nước n&agrave;y c&oacute; từ 3 tới 4 k&yacute; tự tr&ecirc;n mỗi ph&iacute;m. L&acirc;u l&acirc;u ấn tổ hợp ph&iacute;m c&ograve;n thấy th&iacute;ch chứ phải ấn cả ng&agrave;y để viết th&igrave; thật sự rất nản ch&iacute; lu&ocirc;n.</p>', '2021-11-17', '2021-12-12 16:04:52.114088', 1, ''),
-(4, 'Tượng đài bàn phím', 'news/background2.png', '', '<p>Tượng đ&agrave;i thường xuất hiện để thể hiện sự ngưỡng mộ, t&ocirc;n s&ugrave;ng, ghi nhớ v&agrave; k&iacute;nh trọng với một nh&acirc;n vật n&agrave;o đ&oacute;, 1 sự kiện n&agrave;o đ&oacute;. Cũng c&oacute; thể l&agrave; 1 biểu tượng n&agrave;o đ&oacute; của một quốc gia c&oacute; &yacute; nghĩa đặc biệt với người d&acirc;n địa phương hay quốc gia đ&oacute;. Thế nhưng b&agrave;n ph&iacute;m m&aacute;y t&iacute;nh &ndash; thứ m&agrave; ai cũng thấy &amp; sử dụng h&agrave;ng ng&agrave;y cũng lại c&oacute; tượng đ&agrave;i của m&igrave;nh theo đ&uacute;ng nghĩa đen. Tại th&agrave;nh phố Yekaterinburg &ndash; Nga c&oacute; một tượng đ&agrave;i cho b&agrave;n ph&iacute;m QWERTY kh&ocirc;ng nhỏ. C&aacute;c ph&iacute;m l&agrave; đ&aacute; nguy&ecirc;n khối v&agrave; giữa ch&uacute;ng l&agrave; cỏ tạo th&agrave;nh m&ocirc; h&igrave;nh ti&ecirc;u chuẩn của 1 chiếc b&agrave;n ph&iacute;m. 1 điều th&uacute; vị l&agrave; khi ai đ&oacute; m&agrave; chủ yếu l&agrave; d&acirc;n địa phương ch&aacute;n nản cuộc sống muốn refresh cuộc đời. Họ sẽ tới đ&acirc;y v&agrave; l&agrave;m động t&aacute;c ấn tổ hợp ph&iacute;m CTRL + AlT + DEL bằng c&aacute;ch nhảy theo đ&uacute;ng thứ tự 3 ph&iacute;m n&agrave;y. V&agrave; bạn c&oacute; biết tổ hợp ph&iacute;m Ctrl + Alt + Del được ph&aacute;t minh bởi David Bradley c&ocirc;ng ty IBM sau khi xem x&eacute;t mọi khả năng thấp nhất tr&aacute;nh k&iacute;ch hoạt ngẫu nhi&ecirc;n. V&igrave; chức năng b&agrave;n đầu của n&oacute; bao gồm khởi động lại phần mềm v&agrave; đ&oacute;ng chương tr&igrave;nh tr&ecirc;n Windows. Tượng đ&agrave;i thường xuất hiện để thể hiện sự ngưỡng mộ, t&ocirc;n s&ugrave;ng, ghi nhớ v&agrave; k&iacute;nh trọng với một nh&acirc;n vật n&agrave;o đ&oacute;, 1 sự kiện n&agrave;o đ&oacute;. Cũng c&oacute; thể l&agrave; 1 biểu tượng n&agrave;o đ&oacute; của một quốc gia c&oacute; &yacute; nghĩa đặc biệt với người d&acirc;n địa phương hay quốc gia đ&oacute;. Thế nhưng b&agrave;n ph&iacute;m m&aacute;y t&iacute;nh &ndash; thứ m&agrave; ai cũng thấy &amp; sử dụng h&agrave;ng ng&agrave;y cũng lại c&oacute; tượng đ&agrave;i của m&igrave;nh theo đ&uacute;ng nghĩa đen. Tại th&agrave;nh phố Yekaterinburg &ndash; Nga c&oacute; một tượng đ&agrave;i cho b&agrave;n ph&iacute;m QWERTY kh&ocirc;ng nhỏ. C&aacute;c ph&iacute;m l&agrave; đ&aacute; nguy&ecirc;n khối v&agrave; giữa ch&uacute;ng l&agrave; cỏ tạo th&agrave;nh m&ocirc; h&igrave;nh ti&ecirc;u chuẩn của 1 chiếc b&agrave;n ph&iacute;m. 1 điều th&uacute; vị l&agrave; khi ai đ&oacute; m&agrave; chủ yếu l&agrave; d&acirc;n địa phương ch&aacute;n nản cuộc sống muốn refresh cuộc đời. Họ sẽ tới đ&acirc;y v&agrave; l&agrave;m động t&aacute;c ấn tổ hợp ph&iacute;m CTRL + AlT + DEL bằng c&aacute;ch nhảy theo đ&uacute;ng thứ tự 3 ph&iacute;m n&agrave;y. V&agrave; bạn c&oacute; biết tổ hợp ph&iacute;m Ctrl + Alt + Del được ph&aacute;t minh bởi David Bradley c&ocirc;ng ty IBM sau khi xem x&eacute;t mọi khả năng thấp nhất tr&aacute;nh k&iacute;ch hoạt ngẫu nhi&ecirc;n. V&igrave; chức năng b&agrave;n đầu của n&oacute; bao gồm khởi động lại phần mềm v&agrave; đ&oacute;ng chương tr&igrave;nh tr&ecirc;n Windows.</p>', '2021-11-17', '2021-12-12 16:04:41.940669', 1, ''),
-(5, 'Phím được bấm nhiều nhất', 'news/bee7.png', '', '<p>Nếu phải đo&aacute;n ph&iacute;m n&agrave;o bị ấn nhiều nhất chắc chắn c&aacute;c bạn sẽ đo&aacute;n ra ngay l&agrave; n&uacute;t Space. Đặc biệt nếu ai đ&atilde; từng chơi hay đam m&ecirc; tựa game audition th&igrave; n&uacute;t Space của b&agrave;n ph&iacute;m chắc chắn l&agrave; bị tra tấn khủng khiếp v&agrave; thường phải thay thế kh&aacute; sớm so với th&ocirc;ng thường. N&uacute;t Space được ấn nhiều tới nỗi, cứ mỗi khi bạn ấn n&uacute;t Space 1 lần th&igrave; c&oacute; khoảng 600.000 người kh&aacute;c tr&ecirc;n thế giới cũng c&ugrave;ng l&uacute;c ấn ph&iacute;m Space với bạn. N&oacute; chiếm tới 18% tổng số nhập văn bản trung b&igrave;nh. Kh&ocirc;ng tin th&igrave; bạn thử đếm số k&yacute; tự v&agrave; số khoảng trắng trong 1 văn bản của m&igrave;nh xem. Dễ d&agrave;ng ta thấy số từ sẽ bằng số khoảng trắng, v&agrave; nếu trung b&igrave;nh 1 từ c&oacute; từ 4-5 k&yacute; tự th&igrave; bạn biết t&iacute;nh ra % của space rồi đ&oacute;. Nhưng thực tế n&uacute;t Space kh&ocirc;ng được t&igrave;nh v&igrave; n&oacute; kh&ocirc;ng thể hiện k&yacute; tự g&igrave; cả, n&oacute;i ch&iacute;nh x&aacute;c l&agrave; n&oacute; chỉ c&oacute; &yacute; nghĩa tr&ecirc;n m&aacute;y t&iacute;nh cũng giống như 1 số n&uacute;t kh&aacute;c. Bạn kh&ocirc;ng thể ph&aacute;t &acirc;m ra ph&iacute;m Space bằng miệng được. C&ograve;n nếu t&iacute;nh về ph&iacute;m c&oacute; nghĩa, c&oacute; thể ph&aacute;t &acirc;m ra được th&igrave; E v&agrave; T l&agrave; 2 ph&iacute;m được ấn nhiều nhất tr&ecirc;n thế giới.</p>', '2021-11-17', '2021-12-12 16:04:33.689308', 1, '');
+INSERT INTO `news` (`newsid`, `title`, `image`, `description`, `content`, `createdate`, `editdate`, `isenable`, `note`, `author`) VALUES
+(1, 'Tốc độ đánh máy chuẩn', 'news/background3.png', '', '<p>từ n&agrave;y. Khả năng g&otilde; ph&iacute;m hay được viết tắt l&agrave; WPM ( word per min) t&iacute;nh theo tiếng anh. Được chia l&agrave;m 4 cấp độ + Tốc độ đ&aacute;nh m&aacute;y thấp: Dưới 60WPM + Tốc độ đ&aacute;nh m&aacute;y trung b&igrave;nh: Từ 60 đến 100 WPM + Tốc độ đ&aacute;nh m&aacute;y cao: Từ 100 WPM đến 140WPM. + Tốc độ đ&aacute;nh m&aacute;y chuy&ecirc;n nghiệp: Tr&ecirc;n 140WPM</p>', '2021-11-17', '2021-12-12 16:05:21.590387', 1, '', NULL),
+(2, 'Vệ sinh bàn phím thường xuyên', 'news/bee4.png', '', '<p>B&agrave;n ph&iacute;m bẩn gấp 5 lần nh&agrave; vệ sinh Kh&ocirc;ng nhiều người d&ugrave;ng c&oacute; th&oacute;i quen vệ sinh b&agrave;n ph&iacute;m thường xuy&ecirc;n, khiến c&aacute;c chất bẩn như t&oacute;c, da chết v&agrave; nhiều loại vi khuẩn từ tay bạn bị b&aacute;m lại tr&ecirc;n b&agrave;n ph&iacute;m. Đ&oacute; l&agrave; l&yacute; do b&agrave;n ph&iacute;m n&ecirc;n được vệ sinh v&agrave;i th&aacute;ng 1 lần. H&agrave;ng ng&agrave;y hầu hết ch&uacute;ng ta đều đ&aacute;nh m&aacute;y rất nhiều, mồ h&ocirc;i v&agrave; những chất bất, vi khuẩn c&oacute; thể từ ch&uacute;ng ta tăng th&ecirc;m l&ecirc;n b&agrave;n ph&iacute;m v&agrave; cũng ngược lại. Do vậy lời khuy&ecirc;n l&agrave; lu&ocirc;n rửa tay khi rời khỏi b&agrave;n ph&iacute;m. Nhất l&agrave; c&aacute;c bạn văn ph&ograve;ng , đang ngồi m&agrave; c&oacute; đồ ăn vặt bốc tay lu&ocirc;n l&agrave; rất kh&ocirc;ng tốt.</p>', '2021-11-17', '2021-12-12 16:05:05.439754', 1, '', NULL),
+(3, 'Nước nào đánh máy khó nhất', 'news/bee3.png', '', '<p>Bạn đ&atilde; bao giờ hỏi m&igrave;nh l&agrave; : &ldquo;Tiếng việt g&otilde; thật đơn giản. Thế với những k&yacute; tự loằng ngoằng như chữ Nhật, Trung th&igrave; b&agrave;n ph&iacute;m g&otilde; kiểu g&igrave; &rdquo; kh&ocirc;ng ? Sự thật l&agrave; 2 quốc gia tr&ecirc;n c&oacute; bộ g&otilde; kh&oacute; nhất thế giới. Cũng sử dụng b&agrave;n ph&iacute;m bố tr&iacute; QWERTY, nhưng khi ấn ph&iacute;m bạn cần hiểu phi&ecirc;n bản chữ Latinh của chữ cần nhập hoặc chỉ nhập c&aacute;c k&yacute; tự đơn giản, chắp nối. Sau đ&oacute; lại cần nh&igrave;n v&agrave; thay đổi n&oacute; th&agrave;nh từ đ&uacute;ng với ng&ocirc;n ngữ Trung hoặc Nhật ( chọn lại tr&ecirc;n m&agrave;n h&igrave;nh). Thực sự việc đ&aacute;nh m&aacute;y ở những nước n&agrave;y cần khổ luyện rất nhiều, ki&ecirc;n nhẫn v&agrave; đầy rẫy kh&oacute; khăn. Đặc biệt tiếng Trung v&igrave; bạn cũng biết đ&oacute;, chỉ hơn k&eacute;m nhau 1 t&yacute; về độ d&agrave;i n&eacute;t th&ocirc;i cũng đ&atilde; th&agrave;nh 1 chữ kh&aacute;c rồi. Ch&iacute;nh v&igrave; vậy tất nhi&ecirc;n hai nước n&agrave;y cũng c&oacute; mặt trong danh s&aacute;ch những b&agrave;n ph&iacute;m phức tạp nhất thế giới. V&igrave; c&oacute; qu&aacute; nhiều ng&ocirc;n ngữ tr&ecirc;n c&ugrave;ng 1 b&agrave;n ph&iacute;m hoặc bảng chữ c&aacute;i c&oacute; h&agrave;ng trăm k&yacute; tự v&agrave; sẽ được thể hiện bằng c&aacute;c tổ hợp ph&iacute;m. V&iacute; dụ Th&aacute;i Lan, H&agrave;n Quốc, Ấn Độ. Tất nhi&ecirc;n l&agrave; cả 2 nước vừa n&oacute;i ph&iacute;a tr&ecirc;n. C&aacute;c b&agrave;n phim của c&aacute;c nước n&agrave;y c&oacute; từ 3 tới 4 k&yacute; tự tr&ecirc;n mỗi ph&iacute;m. L&acirc;u l&acirc;u ấn tổ hợp ph&iacute;m c&ograve;n thấy th&iacute;ch chứ phải ấn cả ng&agrave;y để viết th&igrave; thật sự rất nản ch&iacute; lu&ocirc;n.</p>', '2021-11-17', '2021-12-12 16:04:52.114088', 1, '', NULL),
+(4, 'Tượng đài bàn phím', 'news/background2.png', '', '<p>Tượng đ&agrave;i thường xuất hiện để thể hiện sự ngưỡng mộ, t&ocirc;n s&ugrave;ng, ghi nhớ v&agrave; k&iacute;nh trọng với một nh&acirc;n vật n&agrave;o đ&oacute;, 1 sự kiện n&agrave;o đ&oacute;. Cũng c&oacute; thể l&agrave; 1 biểu tượng n&agrave;o đ&oacute; của một quốc gia c&oacute; &yacute; nghĩa đặc biệt với người d&acirc;n địa phương hay quốc gia đ&oacute;. Thế nhưng b&agrave;n ph&iacute;m m&aacute;y t&iacute;nh &ndash; thứ m&agrave; ai cũng thấy &amp; sử dụng h&agrave;ng ng&agrave;y cũng lại c&oacute; tượng đ&agrave;i của m&igrave;nh theo đ&uacute;ng nghĩa đen. Tại th&agrave;nh phố Yekaterinburg &ndash; Nga c&oacute; một tượng đ&agrave;i cho b&agrave;n ph&iacute;m QWERTY kh&ocirc;ng nhỏ. C&aacute;c ph&iacute;m l&agrave; đ&aacute; nguy&ecirc;n khối v&agrave; giữa ch&uacute;ng l&agrave; cỏ tạo th&agrave;nh m&ocirc; h&igrave;nh ti&ecirc;u chuẩn của 1 chiếc b&agrave;n ph&iacute;m. 1 điều th&uacute; vị l&agrave; khi ai đ&oacute; m&agrave; chủ yếu l&agrave; d&acirc;n địa phương ch&aacute;n nản cuộc sống muốn refresh cuộc đời. Họ sẽ tới đ&acirc;y v&agrave; l&agrave;m động t&aacute;c ấn tổ hợp ph&iacute;m CTRL + AlT + DEL bằng c&aacute;ch nhảy theo đ&uacute;ng thứ tự 3 ph&iacute;m n&agrave;y. V&agrave; bạn c&oacute; biết tổ hợp ph&iacute;m Ctrl + Alt + Del được ph&aacute;t minh bởi David Bradley c&ocirc;ng ty IBM sau khi xem x&eacute;t mọi khả năng thấp nhất tr&aacute;nh k&iacute;ch hoạt ngẫu nhi&ecirc;n. V&igrave; chức năng b&agrave;n đầu của n&oacute; bao gồm khởi động lại phần mềm v&agrave; đ&oacute;ng chương tr&igrave;nh tr&ecirc;n Windows. Tượng đ&agrave;i thường xuất hiện để thể hiện sự ngưỡng mộ, t&ocirc;n s&ugrave;ng, ghi nhớ v&agrave; k&iacute;nh trọng với một nh&acirc;n vật n&agrave;o đ&oacute;, 1 sự kiện n&agrave;o đ&oacute;. Cũng c&oacute; thể l&agrave; 1 biểu tượng n&agrave;o đ&oacute; của một quốc gia c&oacute; &yacute; nghĩa đặc biệt với người d&acirc;n địa phương hay quốc gia đ&oacute;. Thế nhưng b&agrave;n ph&iacute;m m&aacute;y t&iacute;nh &ndash; thứ m&agrave; ai cũng thấy &amp; sử dụng h&agrave;ng ng&agrave;y cũng lại c&oacute; tượng đ&agrave;i của m&igrave;nh theo đ&uacute;ng nghĩa đen. Tại th&agrave;nh phố Yekaterinburg &ndash; Nga c&oacute; một tượng đ&agrave;i cho b&agrave;n ph&iacute;m QWERTY kh&ocirc;ng nhỏ. C&aacute;c ph&iacute;m l&agrave; đ&aacute; nguy&ecirc;n khối v&agrave; giữa ch&uacute;ng l&agrave; cỏ tạo th&agrave;nh m&ocirc; h&igrave;nh ti&ecirc;u chuẩn của 1 chiếc b&agrave;n ph&iacute;m. 1 điều th&uacute; vị l&agrave; khi ai đ&oacute; m&agrave; chủ yếu l&agrave; d&acirc;n địa phương ch&aacute;n nản cuộc sống muốn refresh cuộc đời. Họ sẽ tới đ&acirc;y v&agrave; l&agrave;m động t&aacute;c ấn tổ hợp ph&iacute;m CTRL + AlT + DEL bằng c&aacute;ch nhảy theo đ&uacute;ng thứ tự 3 ph&iacute;m n&agrave;y. V&agrave; bạn c&oacute; biết tổ hợp ph&iacute;m Ctrl + Alt + Del được ph&aacute;t minh bởi David Bradley c&ocirc;ng ty IBM sau khi xem x&eacute;t mọi khả năng thấp nhất tr&aacute;nh k&iacute;ch hoạt ngẫu nhi&ecirc;n. V&igrave; chức năng b&agrave;n đầu của n&oacute; bao gồm khởi động lại phần mềm v&agrave; đ&oacute;ng chương tr&igrave;nh tr&ecirc;n Windows.</p>', '2021-11-17', '2021-12-12 16:04:41.940669', 1, '', NULL),
+(5, 'Phím được bấm nhiều nhất', 'news/bee7.png', '', '<p>Nếu phải đo&aacute;n ph&iacute;m n&agrave;o bị ấn nhiều nhất chắc chắn c&aacute;c bạn sẽ đo&aacute;n ra ngay l&agrave; n&uacute;t Space. Đặc biệt nếu ai đ&atilde; từng chơi hay đam m&ecirc; tựa game audition th&igrave; n&uacute;t Space của b&agrave;n ph&iacute;m chắc chắn l&agrave; bị tra tấn khủng khiếp v&agrave; thường phải thay thế kh&aacute; sớm so với th&ocirc;ng thường. N&uacute;t Space được ấn nhiều tới nỗi, cứ mỗi khi bạn ấn n&uacute;t Space 1 lần th&igrave; c&oacute; khoảng 600.000 người kh&aacute;c tr&ecirc;n thế giới cũng c&ugrave;ng l&uacute;c ấn ph&iacute;m Space với bạn. N&oacute; chiếm tới 18% tổng số nhập văn bản trung b&igrave;nh. Kh&ocirc;ng tin th&igrave; bạn thử đếm số k&yacute; tự v&agrave; số khoảng trắng trong 1 văn bản của m&igrave;nh xem. Dễ d&agrave;ng ta thấy số từ sẽ bằng số khoảng trắng, v&agrave; nếu trung b&igrave;nh 1 từ c&oacute; từ 4-5 k&yacute; tự th&igrave; bạn biết t&iacute;nh ra % của space rồi đ&oacute;. Nhưng thực tế n&uacute;t Space kh&ocirc;ng được t&igrave;nh v&igrave; n&oacute; kh&ocirc;ng thể hiện k&yacute; tự g&igrave; cả, n&oacute;i ch&iacute;nh x&aacute;c l&agrave; n&oacute; chỉ c&oacute; &yacute; nghĩa tr&ecirc;n m&aacute;y t&iacute;nh cũng giống như 1 số n&uacute;t kh&aacute;c. Bạn kh&ocirc;ng thể ph&aacute;t &acirc;m ra ph&iacute;m Space bằng miệng được. C&ograve;n nếu t&iacute;nh về ph&iacute;m c&oacute; nghĩa, c&oacute; thể ph&aacute;t &acirc;m ra được th&igrave; E v&agrave; T l&agrave; 2 ph&iacute;m được ấn nhiều nhất tr&ecirc;n thế giới.</p>', '2021-11-17', '2021-12-12 16:04:33.689308', 1, '', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `practicebadge`
+-- Table structure for table `practicebadge`
 --
 
 CREATE TABLE `practicebadge` (
@@ -984,7 +1110,7 @@ CREATE TABLE `practicebadge` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `text`
+-- Table structure for table `text`
 --
 
 CREATE TABLE `text` (
@@ -1002,7 +1128,7 @@ CREATE TABLE `text` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `timetest`
+-- Table structure for table `timetest`
 --
 
 CREATE TABLE `timetest` (
@@ -1019,7 +1145,7 @@ CREATE TABLE `timetest` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `timetest`
+-- Dumping data for table `timetest`
 --
 
 INSERT INTO `timetest` (`timetestid`, `name`, `time`, `description`, `link`, `createdate`, `editdate`, `isenable`, `note`, `image`) VALUES
@@ -1033,7 +1159,7 @@ INSERT INTO `timetest` (`timetestid`, `name`, `time`, `description`, `link`, `cr
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `topiclesson`
+-- Table structure for table `topiclesson`
 --
 
 CREATE TABLE `topiclesson` (
@@ -1049,7 +1175,7 @@ CREATE TABLE `topiclesson` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `topiclesson`
+-- Dumping data for table `topiclesson`
 --
 
 INSERT INTO `topiclesson` (`topiclessonid`, `topicorder`, `name`, `description`, `stars`, `createdate`, `editdate`, `isenable`, `note`) VALUES
@@ -1064,7 +1190,7 @@ INSERT INTO `topiclesson` (`topiclessonid`, `topicorder`, `name`, `description`,
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `topicpractice`
+-- Table structure for table `topicpractice`
 --
 
 CREATE TABLE `topicpractice` (
@@ -1080,7 +1206,7 @@ CREATE TABLE `topicpractice` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `topicpractice`
+-- Dumping data for table `topicpractice`
 --
 
 INSERT INTO `topicpractice` (`topicpracticeid`, `topicorder`, `name`, `description`, `stars`, `createdate`, `editdate`, `isenable`, `note`) VALUES
@@ -1091,7 +1217,7 @@ INSERT INTO `topicpractice` (`topicpracticeid`, `topicorder`, `name`, `descripti
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `trackingactivity`
+-- Table structure for table `trackingactivity`
 --
 
 CREATE TABLE `trackingactivity` (
@@ -1101,24 +1227,31 @@ CREATE TABLE `trackingactivity` (
   `isenable` tinyint(1) DEFAULT NULL,
   `note` longtext DEFAULT NULL,
   `accountid_id` int(11) DEFAULT NULL,
-  `activityid_id` int(11) DEFAULT NULL
+  `activityid_id` int(11) DEFAULT NULL,
+  `lessonid_id` int(11) DEFAULT NULL,
+  `topiclessonid_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `trackingactivity`
+-- Dumping data for table `trackingactivity`
 --
 
-INSERT INTO `trackingactivity` (`trackingactivityid`, `createdate`, `editdate`, `isenable`, `note`, `accountid_id`, `activityid_id`) VALUES
-(1, '2021-12-21', '2021-12-21 14:26:52.271897', 1, NULL, 16, 9),
-(2, '2021-12-24', '2021-12-24 02:19:12.728588', 1, NULL, 16, 4),
-(3, '2021-12-24', '2021-12-24 02:22:53.076199', 1, NULL, 16, 14),
-(4, '2021-12-24', '2021-12-24 02:33:48.218281', 1, NULL, 16, 6),
-(5, '2021-12-24', '2021-12-24 02:40:12.034746', 1, NULL, 16, 7);
+INSERT INTO `trackingactivity` (`trackingactivityid`, `createdate`, `editdate`, `isenable`, `note`, `accountid_id`, `activityid_id`, `lessonid_id`, `topiclessonid_id`) VALUES
+(1, '2021-12-21', '2021-12-21 14:26:52.271897', 1, NULL, 16, 9, NULL, NULL),
+(2, '2021-12-24', '2021-12-24 02:19:12.728588', 1, NULL, 16, 4, NULL, NULL),
+(3, '2021-12-24', '2021-12-24 02:22:53.076199', 1, NULL, 16, 14, NULL, NULL),
+(4, '2021-12-24', '2021-12-24 02:33:48.218281', 1, NULL, 16, 6, NULL, NULL),
+(5, '2021-12-24', '2021-12-24 02:40:12.034746', 1, NULL, 16, 7, NULL, NULL),
+(6, '2022-01-02', '2022-01-01 21:22:45.480199', 1, NULL, 16, 21, 5, 2),
+(7, '2022-01-02', '2022-01-01 21:56:47.945402', 1, NULL, 16, 8, 1, 1),
+(8, '2022-01-02', '2022-01-01 21:57:27.330249', 1, NULL, 16, 9, 1, 1),
+(9, '2022-01-03', '2022-01-02 18:24:30.805266', 1, NULL, 16, 1, 1, 1),
+(10, '2022-01-04', '2022-01-04 13:32:40.944157', 1, NULL, 16, 4, 3, 2);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `trackinglevelgame`
+-- Table structure for table `trackinglevelgame`
 --
 
 CREATE TABLE `trackinglevelgame` (
@@ -1129,20 +1262,22 @@ CREATE TABLE `trackinglevelgame` (
   `note` longtext DEFAULT NULL,
   `accountid_id` int(11) DEFAULT NULL,
   `gameid_id` int(11) DEFAULT NULL,
-  `levelid_id` int(11) DEFAULT NULL
+  `levelid_id` int(11) DEFAULT NULL,
+  `stars` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `trackinglevelgame`
+-- Dumping data for table `trackinglevelgame`
 --
 
-INSERT INTO `trackinglevelgame` (`trackinglevelid`, `createdate`, `editdate`, `isenable`, `note`, `accountid_id`, `gameid_id`, `levelid_id`) VALUES
-(1, '2022-01-01', '2022-01-01 16:16:26.698459', 1, NULL, 16, 1, 1);
+INSERT INTO `trackinglevelgame` (`trackinglevelid`, `createdate`, `editdate`, `isenable`, `note`, `accountid_id`, `gameid_id`, `levelid_id`, `stars`) VALUES
+(1, '2022-01-01', '2022-01-01 19:09:29.112109', 1, NULL, 16, 1, 1, 3),
+(2, '2022-01-02', '2022-01-01 20:44:50.320450', 1, NULL, 16, 1, 2, 2);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `userdetail`
+-- Table structure for table `userdetail`
 --
 
 CREATE TABLE `userdetail` (
@@ -1163,7 +1298,7 @@ CREATE TABLE `userdetail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `userdetail`
+-- Dumping data for table `userdetail`
 --
 
 INSERT INTO `userdetail` (`userdetailid`, `lastname`, `firstname`, `yearofbirth`, `userobject`, `grade`, `guardian`, `phone`, `email`, `createdate`, `editdate`, `isenable`, `note`, `accountid_id`) VALUES
@@ -1180,7 +1315,7 @@ INSERT INTO `userdetail` (`userdetailid`, `lastname`, `firstname`, `yearofbirth`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `word`
+-- Table structure for table `word`
 --
 
 CREATE TABLE `word` (
@@ -1194,11 +1329,11 @@ CREATE TABLE `word` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `account`
+-- Indexes for table `account`
 --
 ALTER TABLE `account`
   ADD PRIMARY KEY (`accountid`),
@@ -1206,21 +1341,21 @@ ALTER TABLE `account`
   ADD KEY `Account_callsignid_id_f081161c_fk` (`callsignid_id`);
 
 --
--- Chỉ mục cho bảng `activity`
+-- Indexes for table `activity`
 --
 ALTER TABLE `activity`
   ADD PRIMARY KEY (`activityid`),
   ADD KEY `Activity_lessonid_id_70fc49ad_fk_Lesson_lessonid` (`lessonid_id`);
 
 --
--- Chỉ mục cho bảng `auth_group`
+-- Indexes for table `auth_group`
 --
 ALTER TABLE `auth_group`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `name` (`name`);
 
 --
--- Chỉ mục cho bảng `auth_group_permissions`
+-- Indexes for table `auth_group_permissions`
 --
 ALTER TABLE `auth_group_permissions`
   ADD PRIMARY KEY (`id`),
@@ -1228,21 +1363,21 @@ ALTER TABLE `auth_group_permissions`
   ADD KEY `auth_group_permissio_permission_id_84c5c92e_fk_auth_perm` (`permission_id`);
 
 --
--- Chỉ mục cho bảng `auth_permission`
+-- Indexes for table `auth_permission`
 --
 ALTER TABLE `auth_permission`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `auth_permission_content_type_id_codename_01ab375a_uniq` (`content_type_id`,`codename`);
 
 --
--- Chỉ mục cho bảng `auth_user`
+-- Indexes for table `auth_user`
 --
 ALTER TABLE `auth_user`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- Chỉ mục cho bảng `auth_user_groups`
+-- Indexes for table `auth_user_groups`
 --
 ALTER TABLE `auth_user_groups`
   ADD PRIMARY KEY (`id`),
@@ -1250,7 +1385,7 @@ ALTER TABLE `auth_user_groups`
   ADD KEY `auth_user_groups_group_id_97559544_fk_auth_group_id` (`group_id`);
 
 --
--- Chỉ mục cho bảng `auth_user_user_permissions`
+-- Indexes for table `auth_user_user_permissions`
 --
 ALTER TABLE `auth_user_user_permissions`
   ADD PRIMARY KEY (`id`),
@@ -1258,44 +1393,50 @@ ALTER TABLE `auth_user_user_permissions`
   ADD KEY `auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm` (`permission_id`);
 
 --
--- Chỉ mục cho bảng `callsign`
+-- Indexes for table `callsign`
 --
 ALTER TABLE `callsign`
   ADD PRIMARY KEY (`callsignid`);
 
 --
--- Chỉ mục cho bảng `character`
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`categoryid`);
+
+--
+-- Indexes for table `character`
 --
 ALTER TABLE `character`
   ADD PRIMARY KEY (`characterid`);
 
 --
--- Chỉ mục cho bảng `competition`
+-- Indexes for table `competition`
 --
 ALTER TABLE `competition`
   ADD PRIMARY KEY (`competitionid`);
 
 --
--- Chỉ mục cho bảng `competitionbadge`
+-- Indexes for table `competitionbadge`
 --
 ALTER TABLE `competitionbadge`
   ADD PRIMARY KEY (`competitionbadgeid`),
   ADD KEY `CompetitionBadge_competitionid_id_b766acfd_fk` (`competitionid_id`);
 
 --
--- Chỉ mục cho bảng `contact`
+-- Indexes for table `contact`
 --
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`contactid`);
 
 --
--- Chỉ mục cho bảng `contenttest`
+-- Indexes for table `contenttest`
 --
 ALTER TABLE `contenttest`
   ADD PRIMARY KEY (`contenttestid`);
 
 --
--- Chỉ mục cho bảng `django_admin_log`
+-- Indexes for table `django_admin_log`
 --
 ALTER TABLE `django_admin_log`
   ADD PRIMARY KEY (`id`),
@@ -1303,73 +1444,68 @@ ALTER TABLE `django_admin_log`
   ADD KEY `django_admin_log_user_id_c564eba6_fk_auth_user_id` (`user_id`);
 
 --
--- Chỉ mục cho bảng `django_content_type`
+-- Indexes for table `django_content_type`
 --
 ALTER TABLE `django_content_type`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `django_content_type_app_label_model_76bd3d3b_uniq` (`app_label`,`model`);
 
 --
--- Chỉ mục cho bảng `django_migrations`
+-- Indexes for table `django_migrations`
 --
 ALTER TABLE `django_migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `django_session`
+-- Indexes for table `django_session`
 --
 ALTER TABLE `django_session`
   ADD PRIMARY KEY (`session_key`),
   ADD KEY `django_session_expire_date_a5c62663` (`expire_date`);
 
 --
--- Chỉ mục cho bảng `document`
+-- Indexes for table `document`
 --
 ALTER TABLE `document`
-  ADD PRIMARY KEY (`documentid`);
+  ADD PRIMARY KEY (`documentid`),
+  ADD KEY `Document_categoryid_id_26ff9b21_fk_Category_categoryid` (`categoryid_id`);
 
 --
--- Chỉ mục cho bảng `faq`
+-- Indexes for table `faq`
 --
 ALTER TABLE `faq`
   ADD PRIMARY KEY (`faqid`);
 
 --
--- Chỉ mục cho bảng `game`
+-- Indexes for table `game`
 --
 ALTER TABLE `game`
   ADD PRIMARY KEY (`gameid`),
   ADD KEY `Game_topicpracticeid_id_19b7cd09_fk` (`topicpracticeid_id`);
 
 --
--- Chỉ mục cho bảng `gamelevel`
+-- Indexes for table `gamelevel`
 --
 ALTER TABLE `gamelevel`
   ADD PRIMARY KEY (`levelid`),
   ADD KEY `GameLevel_gameid_id_31118348_fk_Game_gameid` (`gameid_id`);
 
 --
--- Chỉ mục cho bảng `header`
---
-ALTER TABLE `header`
-  ADD PRIMARY KEY (`headerid`);
-
---
--- Chỉ mục cho bảng `lesson`
+-- Indexes for table `lesson`
 --
 ALTER TABLE `lesson`
   ADD PRIMARY KEY (`lessonid`),
   ADD KEY `Lesson_topiclessonid_id_5d9e96a2_fk` (`topiclessonid_id`);
 
 --
--- Chỉ mục cho bảng `lessonbadge`
+-- Indexes for table `lessonbadge`
 --
 ALTER TABLE `lessonbadge`
   ADD PRIMARY KEY (`lessonbadgeid`),
   ADD KEY `LessonBadge_topiclessonid_id_872edf05_fk` (`topiclessonid_id`);
 
 --
--- Chỉ mục cho bảng `lessonbadge_own`
+-- Indexes for table `lessonbadge_own`
 --
 ALTER TABLE `lessonbadge_own`
   ADD PRIMARY KEY (`id`),
@@ -1377,19 +1513,26 @@ ALTER TABLE `lessonbadge_own`
   ADD KEY `LessonBadge_own_account_id_e7ca9e5c_fk_Account_accountid` (`account_id`);
 
 --
--- Chỉ mục cho bảng `news`
+-- Indexes for table `lessoninstruction`
+--
+ALTER TABLE `lessoninstruction`
+  ADD PRIMARY KEY (`lessoninstructionid`),
+  ADD KEY `LessonInstruction_lessonid_id_61b599bc_fk_Lesson_lessonid` (`lessonid_id`);
+
+--
+-- Indexes for table `news`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`newsid`);
 
 --
--- Chỉ mục cho bảng `practicebadge`
+-- Indexes for table `practicebadge`
 --
 ALTER TABLE `practicebadge`
   ADD PRIMARY KEY (`practicebadgeid`);
 
 --
--- Chỉ mục cho bảng `text`
+-- Indexes for table `text`
 --
 ALTER TABLE `text`
   ADD PRIMARY KEY (`id`),
@@ -1397,33 +1540,35 @@ ALTER TABLE `text`
   ADD KEY `Text_wordid_id_7ce108ad_fk` (`wordid_id`);
 
 --
--- Chỉ mục cho bảng `timetest`
+-- Indexes for table `timetest`
 --
 ALTER TABLE `timetest`
   ADD PRIMARY KEY (`timetestid`);
 
 --
--- Chỉ mục cho bảng `topiclesson`
+-- Indexes for table `topiclesson`
 --
 ALTER TABLE `topiclesson`
   ADD PRIMARY KEY (`topiclessonid`);
 
 --
--- Chỉ mục cho bảng `topicpractice`
+-- Indexes for table `topicpractice`
 --
 ALTER TABLE `topicpractice`
   ADD PRIMARY KEY (`topicpracticeid`);
 
 --
--- Chỉ mục cho bảng `trackingactivity`
+-- Indexes for table `trackingactivity`
 --
 ALTER TABLE `trackingactivity`
   ADD PRIMARY KEY (`trackingactivityid`),
   ADD KEY `Tracking_accountid_id_2cf50a66_fk_Account_accountid` (`accountid_id`),
-  ADD KEY `Tracking_activityid_id_cee4d1c8_fk_Activity_activityid` (`activityid_id`);
+  ADD KEY `Tracking_activityid_id_cee4d1c8_fk_Activity_activityid` (`activityid_id`),
+  ADD KEY `TrackingActivity_lessonid_id_f9634208_fk_Lesson_lessonid` (`lessonid_id`),
+  ADD KEY `TrackingActivity_topiclessonid_id_e0e84d70_fk_TopicLess` (`topiclessonid_id`);
 
 --
--- Chỉ mục cho bảng `trackinglevelgame`
+-- Indexes for table `trackinglevelgame`
 --
 ALTER TABLE `trackinglevelgame`
   ADD PRIMARY KEY (`trackinglevelid`),
@@ -1432,330 +1577,350 @@ ALTER TABLE `trackinglevelgame`
   ADD KEY `TrackingLevelGame_levelid_id_e12c58ec_fk_GameLevel_levelid` (`levelid_id`);
 
 --
--- Chỉ mục cho bảng `userdetail`
+-- Indexes for table `userdetail`
 --
 ALTER TABLE `userdetail`
   ADD PRIMARY KEY (`userdetailid`),
   ADD KEY `UserDetail_accountid_id_2d38ed41_fk` (`accountid_id`);
 
 --
--- Chỉ mục cho bảng `word`
+-- Indexes for table `word`
 --
 ALTER TABLE `word`
   ADD PRIMARY KEY (`wordid`),
   ADD KEY `Word_characterid_id_7b0ab798_fk` (`characterid_id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `account`
+-- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
   MODIFY `accountid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT cho bảng `activity`
+-- AUTO_INCREMENT for table `activity`
 --
 ALTER TABLE `activity`
-  MODIFY `activityid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `activityid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
--- AUTO_INCREMENT cho bảng `auth_group`
+-- AUTO_INCREMENT for table `auth_group`
 --
 ALTER TABLE `auth_group`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `auth_group_permissions`
+-- AUTO_INCREMENT for table `auth_group_permissions`
 --
 ALTER TABLE `auth_group_permissions`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `auth_permission`
+-- AUTO_INCREMENT for table `auth_permission`
 --
 ALTER TABLE `auth_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 
 --
--- AUTO_INCREMENT cho bảng `auth_user`
+-- AUTO_INCREMENT for table `auth_user`
 --
 ALTER TABLE `auth_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT cho bảng `auth_user_groups`
+-- AUTO_INCREMENT for table `auth_user_groups`
 --
 ALTER TABLE `auth_user_groups`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `auth_user_user_permissions`
+-- AUTO_INCREMENT for table `auth_user_user_permissions`
 --
 ALTER TABLE `auth_user_user_permissions`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `callsign`
+-- AUTO_INCREMENT for table `callsign`
 --
 ALTER TABLE `callsign`
   MODIFY `callsignid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `character`
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `categoryid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `character`
 --
 ALTER TABLE `character`
   MODIFY `characterid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `competition`
+-- AUTO_INCREMENT for table `competition`
 --
 ALTER TABLE `competition`
   MODIFY `competitionid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `competitionbadge`
+-- AUTO_INCREMENT for table `competitionbadge`
 --
 ALTER TABLE `competitionbadge`
   MODIFY `competitionbadgeid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `contact`
+-- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
   MODIFY `contactid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `contenttest`
+-- AUTO_INCREMENT for table `contenttest`
 --
 ALTER TABLE `contenttest`
   MODIFY `contenttestid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `django_admin_log`
+-- AUTO_INCREMENT for table `django_admin_log`
 --
 ALTER TABLE `django_admin_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
--- AUTO_INCREMENT cho bảng `django_content_type`
+-- AUTO_INCREMENT for table `django_content_type`
 --
 ALTER TABLE `django_content_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT cho bảng `django_migrations`
+-- AUTO_INCREMENT for table `django_migrations`
 --
 ALTER TABLE `django_migrations`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
--- AUTO_INCREMENT cho bảng `document`
+-- AUTO_INCREMENT for table `document`
 --
 ALTER TABLE `document`
-  MODIFY `documentid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `documentid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `faq`
+-- AUTO_INCREMENT for table `faq`
 --
 ALTER TABLE `faq`
   MODIFY `faqid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT cho bảng `game`
+-- AUTO_INCREMENT for table `game`
 --
 ALTER TABLE `game`
   MODIFY `gameid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `gamelevel`
+-- AUTO_INCREMENT for table `gamelevel`
 --
 ALTER TABLE `gamelevel`
   MODIFY `levelid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `header`
---
-ALTER TABLE `header`
-  MODIFY `headerid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT cho bảng `lesson`
+-- AUTO_INCREMENT for table `lesson`
 --
 ALTER TABLE `lesson`
-  MODIFY `lessonid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `lessonid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT cho bảng `lessonbadge`
+-- AUTO_INCREMENT for table `lessonbadge`
 --
 ALTER TABLE `lessonbadge`
   MODIFY `lessonbadgeid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `lessonbadge_own`
+-- AUTO_INCREMENT for table `lessonbadge_own`
 --
 ALTER TABLE `lessonbadge_own`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `news`
+-- AUTO_INCREMENT for table `lessoninstruction`
+--
+ALTER TABLE `lessoninstruction`
+  MODIFY `lessoninstructionid` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
   MODIFY `newsid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT cho bảng `practicebadge`
+-- AUTO_INCREMENT for table `practicebadge`
 --
 ALTER TABLE `practicebadge`
   MODIFY `practicebadgeid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `text`
+-- AUTO_INCREMENT for table `text`
 --
 ALTER TABLE `text`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `timetest`
+-- AUTO_INCREMENT for table `timetest`
 --
 ALTER TABLE `timetest`
   MODIFY `timetestid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `topiclesson`
+-- AUTO_INCREMENT for table `topiclesson`
 --
 ALTER TABLE `topiclesson`
   MODIFY `topiclessonid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT cho bảng `topicpractice`
+-- AUTO_INCREMENT for table `topicpractice`
 --
 ALTER TABLE `topicpractice`
   MODIFY `topicpracticeid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `trackingactivity`
+-- AUTO_INCREMENT for table `trackingactivity`
 --
 ALTER TABLE `trackingactivity`
-  MODIFY `trackingactivityid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `trackingactivityid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT cho bảng `trackinglevelgame`
+-- AUTO_INCREMENT for table `trackinglevelgame`
 --
 ALTER TABLE `trackinglevelgame`
-  MODIFY `trackinglevelid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `trackinglevelid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `userdetail`
+-- AUTO_INCREMENT for table `userdetail`
 --
 ALTER TABLE `userdetail`
   MODIFY `userdetailid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT cho bảng `word`
+-- AUTO_INCREMENT for table `word`
 --
 ALTER TABLE `word`
   MODIFY `wordid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `account`
+-- Constraints for table `account`
 --
 ALTER TABLE `account`
   ADD CONSTRAINT `Account_callsignid_id_f081161c_fk` FOREIGN KEY (`callsignid_id`) REFERENCES `callsign` (`callsignid`),
   ADD CONSTRAINT `Account_username_id_6d202649_fk_auth_user_id` FOREIGN KEY (`username_id`) REFERENCES `auth_user` (`id`);
 
 --
--- Các ràng buộc cho bảng `activity`
+-- Constraints for table `activity`
 --
 ALTER TABLE `activity`
   ADD CONSTRAINT `Activity_lessonid_id_70fc49ad_fk_Lesson_lessonid` FOREIGN KEY (`lessonid_id`) REFERENCES `lesson` (`lessonid`);
 
 --
--- Các ràng buộc cho bảng `auth_group_permissions`
+-- Constraints for table `auth_group_permissions`
 --
 ALTER TABLE `auth_group_permissions`
   ADD CONSTRAINT `auth_group_permissio_permission_id_84c5c92e_fk_auth_perm` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`),
   ADD CONSTRAINT `auth_group_permissions_group_id_b120cbf9_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`);
 
 --
--- Các ràng buộc cho bảng `auth_permission`
+-- Constraints for table `auth_permission`
 --
 ALTER TABLE `auth_permission`
   ADD CONSTRAINT `auth_permission_content_type_id_2f476e4b_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`);
 
 --
--- Các ràng buộc cho bảng `auth_user_groups`
+-- Constraints for table `auth_user_groups`
 --
 ALTER TABLE `auth_user_groups`
   ADD CONSTRAINT `auth_user_groups_group_id_97559544_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`),
   ADD CONSTRAINT `auth_user_groups_user_id_6a12ed8b_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`);
 
 --
--- Các ràng buộc cho bảng `auth_user_user_permissions`
+-- Constraints for table `auth_user_user_permissions`
 --
 ALTER TABLE `auth_user_user_permissions`
   ADD CONSTRAINT `auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`),
   ADD CONSTRAINT `auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`);
 
 --
--- Các ràng buộc cho bảng `competitionbadge`
+-- Constraints for table `competitionbadge`
 --
 ALTER TABLE `competitionbadge`
   ADD CONSTRAINT `CompetitionBadge_competitionid_id_b766acfd_fk` FOREIGN KEY (`competitionid_id`) REFERENCES `competition` (`competitionid`);
 
 --
--- Các ràng buộc cho bảng `django_admin_log`
+-- Constraints for table `django_admin_log`
 --
 ALTER TABLE `django_admin_log`
   ADD CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`),
   ADD CONSTRAINT `django_admin_log_user_id_c564eba6_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`);
 
 --
--- Các ràng buộc cho bảng `game`
+-- Constraints for table `document`
+--
+ALTER TABLE `document`
+  ADD CONSTRAINT `Document_categoryid_id_26ff9b21_fk_Category_categoryid` FOREIGN KEY (`categoryid_id`) REFERENCES `category` (`categoryid`);
+
+--
+-- Constraints for table `game`
 --
 ALTER TABLE `game`
   ADD CONSTRAINT `Game_topicpracticeid_id_19b7cd09_fk` FOREIGN KEY (`topicpracticeid_id`) REFERENCES `topicpractice` (`topicpracticeid`);
 
 --
--- Các ràng buộc cho bảng `gamelevel`
+-- Constraints for table `gamelevel`
 --
 ALTER TABLE `gamelevel`
   ADD CONSTRAINT `GameLevel_gameid_id_31118348_fk_Game_gameid` FOREIGN KEY (`gameid_id`) REFERENCES `game` (`gameid`);
 
 --
--- Các ràng buộc cho bảng `lesson`
+-- Constraints for table `lesson`
 --
 ALTER TABLE `lesson`
   ADD CONSTRAINT `Lesson_topiclessonid_id_5d9e96a2_fk` FOREIGN KEY (`topiclessonid_id`) REFERENCES `topiclesson` (`topiclessonid`);
 
 --
--- Các ràng buộc cho bảng `lessonbadge`
+-- Constraints for table `lessonbadge`
 --
 ALTER TABLE `lessonbadge`
   ADD CONSTRAINT `LessonBadge_topiclessonid_id_872edf05_fk` FOREIGN KEY (`topiclessonid_id`) REFERENCES `topiclesson` (`topiclessonid`);
 
 --
--- Các ràng buộc cho bảng `text`
+-- Constraints for table `lessoninstruction`
+--
+ALTER TABLE `lessoninstruction`
+  ADD CONSTRAINT `LessonInstruction_lessonid_id_61b599bc_fk_Lesson_lessonid` FOREIGN KEY (`lessonid_id`) REFERENCES `lesson` (`lessonid`);
+
+--
+-- Constraints for table `text`
 --
 ALTER TABLE `text`
   ADD CONSTRAINT `Text_characterid_id_dbacc2bc_fk` FOREIGN KEY (`characterid_id`) REFERENCES `character` (`characterid`),
   ADD CONSTRAINT `Text_wordid_id_7ce108ad_fk` FOREIGN KEY (`wordid_id`) REFERENCES `word` (`wordid`);
 
 --
--- Các ràng buộc cho bảng `trackingactivity`
+-- Constraints for table `trackingactivity`
 --
 ALTER TABLE `trackingactivity`
+  ADD CONSTRAINT `TrackingActivity_lessonid_id_f9634208_fk_Lesson_lessonid` FOREIGN KEY (`lessonid_id`) REFERENCES `lesson` (`lessonid`),
+  ADD CONSTRAINT `TrackingActivity_topiclessonid_id_e0e84d70_fk_TopicLess` FOREIGN KEY (`topiclessonid_id`) REFERENCES `topiclesson` (`topiclessonid`),
   ADD CONSTRAINT `Tracking_accountid_id_2cf50a66_fk_Account_accountid` FOREIGN KEY (`accountid_id`) REFERENCES `account` (`accountid`),
   ADD CONSTRAINT `Tracking_activityid_id_cee4d1c8_fk_Activity_activityid` FOREIGN KEY (`activityid_id`) REFERENCES `activity` (`activityid`);
 
 --
--- Các ràng buộc cho bảng `trackinglevelgame`
+-- Constraints for table `trackinglevelgame`
 --
 ALTER TABLE `trackinglevelgame`
   ADD CONSTRAINT `TrackingLevelGame_accountid_id_4a11cda2_fk_Account_accountid` FOREIGN KEY (`accountid_id`) REFERENCES `account` (`accountid`),
@@ -1763,13 +1928,13 @@ ALTER TABLE `trackinglevelgame`
   ADD CONSTRAINT `TrackingLevelGame_levelid_id_e12c58ec_fk_GameLevel_levelid` FOREIGN KEY (`levelid_id`) REFERENCES `gamelevel` (`levelid`);
 
 --
--- Các ràng buộc cho bảng `userdetail`
+-- Constraints for table `userdetail`
 --
 ALTER TABLE `userdetail`
   ADD CONSTRAINT `UserDetail_accountid_id_2d38ed41_fk` FOREIGN KEY (`accountid_id`) REFERENCES `account` (`accountid`);
 
 --
--- Các ràng buộc cho bảng `word`
+-- Constraints for table `word`
 --
 ALTER TABLE `word`
   ADD CONSTRAINT `Word_characterid_id_7b0ab798_fk` FOREIGN KEY (`characterid_id`) REFERENCES `character` (`characterid`);

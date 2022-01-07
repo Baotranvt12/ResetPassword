@@ -48,6 +48,13 @@ img {
   height: auto;
   border-radius: 15px 15px 0 0;
 }
+
+.img_document {
+  max-width: 100%;
+  height: 500px;
+  border-radius: 15px 15px 0 0;
+}
+
 h1,
 h2,
 h3,
@@ -440,8 +447,10 @@ p {
   font-size: 16px;
 }
 .btn.style1 {
-  background: #f67f51;
-  color: #fff;
+  background: #e1ffed;
+  color: #f00;
+  border-radius: 50px;
+  border: 1px solid;
 }
 .btn.style2 {
   background: #fff;
@@ -4217,15 +4226,15 @@ ul.course-details-list li i {
   display: block;
   width: 100%;
   background: 0 0;
-  border: 1px solid #c28707;
-  height: 8px;
-  /* border-radius: 15px; */
+  border: 5px solid #42382e;
+  height: 25px;
+  border-radius: 15px;
 }
 .skills.style1 .skillbar .skillbar-bar {
-  height: 6px;
+  height: 15px;
   width: 20%;
   background: #ff0000;
-  /* border-radius: 50px 0 0 50px; */
+  border-radius: 50px;
 }
 .skills p {
   margin: 0 0 5px;
@@ -7069,3 +7078,5 @@ img.user-img {
   flex: 0 0 auto;
   width: 20%;
 }
+
+

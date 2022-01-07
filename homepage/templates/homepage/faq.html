@@ -41,7 +41,9 @@
                         {% csrf_token %}
                         {% for question in questions %}
                         <div class="faq-item">
-                            <h5 onclick="myFunction('{{question.pk}}')">{{question.question}}</h5>
+                            <button class="btn style1 d-block w-100 text-start" onclick="myFunction('{{question.pk}}')">
+                                <i class="fas fa-question-circle"></i>{{question.question}}
+                            </button>
                             <p id="{{question.pk}}" class="hide">{{question.answer}} </p>
                         </div>
                         {% endfor %}

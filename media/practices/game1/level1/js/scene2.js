@@ -148,7 +148,7 @@ class scene2 extends Phaser.Scene{
 			this.add.image(x_flower, y_flower, 'flower_white');
 			const flower_true = this.add.image(x_flower, y_flower, flower);
 			flower_true.visible = false;
-			const char = this.add.text(x_flower - 18, y_flower - 100, list_char1[i], {fontSize: '60px', fontFamily: 'Arial', color: '#000000'});
+			const char = this.add.text(x_flower, y_flower - 68, list_char1[i], {fontSize: '60px', fontFamily: 'Arial', color: '#000000'}).setOrigin(0.5);;
 			x_flower += 300;
 			
 			flowersCallback[list_char1[i]] = () => {
@@ -181,9 +181,9 @@ class scene2 extends Phaser.Scene{
 					this.add.image(x_finger, y_finger, rightHand[i][1]['f']);
 					break;
 				}
-		    console.log(event.key, " : ", event.keyCode);
+
 			const callback = flowersCallback[event.key];
-			// console.log(beeMoving, callback)
+			console.log(beeMoving, callback)
 			if (!beeMoving && callback) {
 				callback();
 				voice_flower.play()

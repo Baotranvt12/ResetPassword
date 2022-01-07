@@ -8,21 +8,6 @@ from django.utils import timezone
 from ckeditor_uploader.fields import RichTextUploadingField
 from ckeditor.fields import RichTextField
 
-class Header(models.Model):
-    headerid = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=250, blank=True, null=True)
-    link = models.CharField(max_length=250, blank=True, null=True)
-    createdate  = models.DateField(auto_now_add=True, blank=True, null=True)
-    editdate = models.DateTimeField(auto_now=True, blank=True, null=True)
-    isenable = models.BooleanField(default=True, blank=True, null=True)
-    note = models.TextField(blank=True, null=True)
-    def __str__(self):
-        return self.name
-    
-    class Meta:
-        managed = True
-        db_table = 'Header'
-
 class Character(models.Model):
     characterid = models.AutoField(primary_key=True)
     name = models.CharField(max_length=250, blank=True, null=True)
@@ -79,7 +64,6 @@ class CallSign(models.Model):
     callsignid = models.AutoField(primary_key=True)
     callsignorder = models.IntegerField(blank=True, null=True)
     name = models.CharField(max_length=250, blank=True, null=True)
-    # frame = models.ImageField(upload_to='frames/')
     frame = models.CharField(max_length=250, null=True)
     exrequired = models.IntegerField(blank=True, null=True)
     createdate  = models.DateField(auto_now_add=True, blank=True, null=True)
@@ -100,15 +84,12 @@ class Account(models.Model):
     callsignid = models.ForeignKey(CallSign, on_delete=models.CASCADE, blank=True, null=True)
     username = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     password = models.CharField(max_length=250, blank=True, null=True)
-    # avatar = models.ImageField(upload_to='accounts/')
     avatar = models.CharField(max_length=250, null=True)
     experience = models.IntegerField(blank=True, null=True)
     createdate  = models.DateField(auto_now_add=True, blank=True, null=True)
     editdate = models.DateTimeField(auto_now=True, blank=True, null=True)
     isenable = models.BooleanField(default=True, blank=True, null=True)
     note = models.TextField(blank=True, null=True)
-
-    # counting = models.ManyToManyField(Character)
 
     # def __str__(self):
     #     return self.username
@@ -163,7 +144,7 @@ class Lesson(models.Model):
     topiclessonid = models.ForeignKey(TopicLesson, on_delete=models.CASCADE, blank=True, null=True)
     lessonorder = models.IntegerField(blank=True, null=True)
     name = models.CharField(max_length=250, blank=True, null=True)
-    image = models.ImageField(upload_to='lessons/images', blank=True, null=True)
+    image = models.CharField(max_length=250, blank=True, null=True)
     description = RichTextUploadingField(blank=True, null=True)
     stars = models.IntegerField(blank=True, null=True)
     createdate  = models.DateField(auto_now_add=True, blank=True, null=True)
@@ -179,6 +160,25 @@ class Lesson(models.Model):
     class Meta:
         managed = True
         db_table = 'Lesson'
+
+class LessonInstruction(models.Model):
+    lessoninstructionid = models.AutoField(primary_key=True)
+    lessonid = models.ForeignKey(Lesson, on_delete=models.CASCADE, blank=True, null=True)
+    name = models.CharField(max_length=250, blank=True, null=True)
+    video = models.CharField(max_length=250, blank=True, null=True)
+    album = models.CharField(max_length=250, blank=True, null=True)
+    content = RichTextUploadingField(blank=True, null=True)
+    createdate  = models.DateField(auto_now_add=True, blank=True, null=True)
+    editdate = models.DateTimeField(auto_now=True, blank=True, null=True)
+    isenable = models.BooleanField(default=True, blank=True, null=True)
+    note = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name 
+    
+    class Meta:
+        managed = True
+        db_table = 'LessonInstruction'
 
 class Activity(models.Model):
     activityid = models.AutoField(primary_key=True)
@@ -381,11 +381,31 @@ class ContentTest(models.Model):
         managed = True
         db_table = 'ContentTest'
 
+class Category(models.Model):
+    categoryid = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=250)
+    createdate  = models.DateField(auto_now_add=True, blank=True, null=True)
+    editdate = models.DateTimeField(auto_now=True, blank=True, null=True)
+    isenable = models.BooleanField(default=True, blank=True, null=True)
+    note = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        managed = True
+        db_table = 'Category'
+
 class Document(models.Model):
     documentid = models.AutoField(primary_key=True)
-    title = models.CharField(max_length=250)
-    image = models.ImageField(upload_to='documents/')
+    categoryid = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True)
+    # categoryid = models.CharField(max_length=250, blank=True, null=True)
+    title = RichTextUploadingField()
+    # author là khóa ngoại liên kết đến account
+    author = models.CharField(max_length=250, blank=True, null=True)
+    image = models.CharField(max_length=250, blank=True, null=True)
     description = RichTextUploadingField(blank=True, null=True)
+    pdf = models.CharField(max_length=250, null=True)
     content = RichTextUploadingField(blank=True, null=True)
     createdate  = models.DateField(auto_now_add=True, blank=True, null=True)
     editdate = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -402,7 +422,9 @@ class Document(models.Model):
 class News(models.Model):
     newsid = models.AutoField(primary_key=True)
     title = models.CharField(max_length=250)
-    image = models.ImageField(upload_to='news/')
+    # author là khóa ngoại liên kết đến account
+    author = models.CharField(max_length=250, blank=True, null=True)
+    image = models.CharField(max_length=250, blank=True, null=True)
     description = RichTextUploadingField(blank=True, null=True)
     content = RichTextUploadingField(blank=True, null=True)
     createdate  = models.DateField(auto_now_add=True, blank=True, null=True)

@@ -1,6 +1,6 @@
 var blazewarriorsstatusgame = false;
 var music;
-var list4 = ["Suốt ngày mê mải", "Cánh Ong bồn chồn", "Từng li mật ấy", "Đong đầy tổ thơm"];
+var list4 = ["Suốt ngày mê mải", "Cánh ong bồn chồn", "Từng li mật ấy", "Đong đầy tổ thơm"];
 var index4 = 0
 var word;
 var right;
@@ -39,8 +39,8 @@ class scene4 extends Phaser.Scene{
 		this.add.image(620, 620, "input");
 		// this.add.image(1090, 620, "check");
 		this.typedMessage = "";
-		this.typedGameObject = this.add.text(230, 583,  "Hello world", {
-			fontSize:70, color:'#c51b7d'
+		this.typedGameObject = this.add.text(230, 580,  "Hello world", {
+			fontSize:74, color:'#c51b7d'
 		}).setOrigin(0).setDepth(20);
 
 		const keypressHandler = (e) => {

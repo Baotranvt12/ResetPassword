@@ -80,12 +80,12 @@ class scene2 extends Phaser.Scene{
 		}
 		
 		// set score
-		this.trueText = this.add.text(30, 545, counttrue1.toString().length == 2 ? counttrue1 : '0' + counttrue1, {fontSize: '60px', fontFamily: 'Comic Sans MS'});
-		this.add.image(150, 580, 'true');
+		this.trueText = this.add.text(30, 545, counttrue1.toString().length >= 2 ? counttrue1 : '00' + counttrue1, {fontSize: '60px', fontFamily: 'Comic Sans MS'});
+		this.add.image(185, 580, 'true');
 
 		// set false
-		this.falseText = this.add.text(220, 545, countfalse1.toString().length == 2 ? countfalse1 : '0' + countfalse1, {fontSize: '60px', fontFamily: 'Comic Sans MS'});
-		this.add.image(330, 580, 'false');
+		this.falseText = this.add.text(230, 545, countfalse1.toString().length == 2 ? countfalse1 : '0' + countfalse1, {fontSize: '60px', fontFamily: 'Comic Sans MS'});
+		this.add.image(340, 580, 'false');
 
 		// current level
 		level1 = this.add.image(1100, 610, current_level);
@@ -147,7 +147,7 @@ class scene2 extends Phaser.Scene{
 			this.add.image(x_flower, y_flower, 'flower_white');
 			const flower_true = this.add.image(x_flower, y_flower, flower);
 			flower_true.visible = false;
-			const char = this.add.text(x_flower - 18, y_flower - 100, list_char1[i], {fontSize: '60px', fontFamily: 'Arial', color: '#000000'});
+			const char = this.add.text(x_flower, y_flower - 68, list_char1[i], {fontSize: '60px', fontFamily: 'Arial', color: '#000000'}).setOrigin(0.5);;
 			x_flower += 300;
 			
 			flowersCallback[list_char1[i]] = () => {
@@ -188,7 +188,7 @@ class scene2 extends Phaser.Scene{
 				voice_flower.play()
 				delete flowersCallback[event.key];
 				counttrue1 += 1;
-				this.trueText.setText(counttrue1.toString().length == 2 ? counttrue1 : '0' + counttrue1);
+				this.trueText.setText(counttrue1.toString().length >= 2 ? counttrue1 : '00' + counttrue1);
 
 				this.endTime1 = 4;
 				console.log(this.endTime1)

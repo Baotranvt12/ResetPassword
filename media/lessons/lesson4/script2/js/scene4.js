@@ -25,8 +25,8 @@ class scene4 extends Phaser.Scene{
 	create(){
 		this.add.image(600, 350, 'bg2');
 		this.add.image(600, 360, 'keyboard3');
-		this.add.image(450, 610, 'lefthand3');
-		this.add.image(750, 610, 'righthand3');
+		this.add.image(450, 610, 'lefthand');
+		this.add.image(750, 610, 'righthand');
 		this.add.image(820, 538, 'beefinger');
 		
 		var key = [];

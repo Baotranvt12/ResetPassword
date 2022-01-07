@@ -32,11 +32,9 @@ class scene2 extends Phaser.Scene{
 		this.load.image('incorrect', 'assets/incorrect.png');
 		this.load.image('keya', 'assets/keyA.png');
 		this.load.audio('tune', 'assets/tune.mp3');
-	
 	}
 	create(){
 		this.add.image(600, 350, 'bg2');
-	
 		var width = game.config.width
 		var height = game.config.height
 		

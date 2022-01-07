@@ -13,12 +13,13 @@ config = {
 	            debug: false
 	        }
     },
-	// backgroundColor: '#FFF7AD',
+	backgroundColor: '#FFFFFF',
 
     audio: {
         disableWebAudio: true
     },
-	scene: [scene0_1, scene0_2, scene0, scene1,  scene2, scene3, scene4, scene5, scene6, scene7]
+	// scene: [scene0_1, scene0_2, scene0, scene1,  scene2, scene3, scene4, scene5, scene6, scene7]
+	scene: [scene0, scene1,  scene2,]
 }
 
 var game = new Phaser.Game(config);

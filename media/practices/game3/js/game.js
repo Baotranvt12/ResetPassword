@@ -17,7 +17,7 @@ config = {
     audio: {
         disableWebAudio: true
     },
-	scene: [scene0, scene0_1, scene0_2, scene1,  scene2, scene3, scene4, scene5, scene6, scene7]
+	scene: [scene0, scene0_1, scene0_2, scene1, scene2, scene3],
 }
 
 var game = new Phaser.Game(config);

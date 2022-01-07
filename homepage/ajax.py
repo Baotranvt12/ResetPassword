@@ -18,7 +18,15 @@ def ajaxtrackcompleteactivity(request):
         activityid = request.GET.get('activityid')
         
         # Cộng 10 điểm kinh nghiệm
-        account.experience += 10
+        account.experience += 100
+
+        # Xét danh hiệu
+        current_callsign = CallSign.objects.get(callsignid = account.callsignid.pk).callsignorder
+        if current_callsign != 6:   # Xét nếu không phải cấp bậc lớn nhất
+            next_callsign = CallSign.objects.get(callsignorder = current_callsign + 1)
+            if account.experience >= next_callsign.exrequired:
+                account.callsignid = next_callsign
+
         account.save()
 
         tracking = TrackingActivity.objects.filter(accountid = account, activityid = activityid, topiclessonid = topiclessonid, lessonid = lessonid)
@@ -49,6 +57,14 @@ def ajaxtrackcompletelevelgame(request):
 
         # Cộng 10 điểm kinh nghiệm
         account.experience += 10
+
+        # Xét danh hiệu
+        current_callsign = CallSign.objects.get(callsignid = account.callsignid.pk).callsignorder
+        if current_callsign != 6:   # Xét nếu không phải cấp bậc lớn nhất
+            next_callsign = CallSign.objects.get(callsignorder = current_callsign + 1)
+            if account.experience >= next_callsign.exrequired:
+                account.callsignid = next_callsign
+
         account.save()
 
         # if tracking đã tồn tại -> ghi đè tracking -> how to check tracking was exist?

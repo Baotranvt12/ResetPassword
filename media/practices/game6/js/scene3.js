@@ -39,8 +39,8 @@ class scene3 extends Phaser.Scene{
 		this.add.image(620, 620, "input");
 
 		this.typedMessage = "";
-		this.typedGameObject = this.add.text(230, 583,  "Hello world", {
-			fontSize:70, color:'#c51b7d'
+		this.typedGameObject = this.add.text(230, 580,  "Hello world", {
+			fontSize:74, color:'#c51b7d'
 		}).setOrigin(0).setDepth(20);
 
 		const keypressHandler = (e) => {

@@ -4,9 +4,13 @@ from .models import *
 admin.site.register(Character)
 admin.site.register(Word)
 admin.site.register(Text)
-admin.site.register(CallSign)
+# admin.site.register(CallSign)
 admin.site.register(Account)
 admin.site.register(UserDetail)
+
+@admin.register(CallSign)
+class CallSignAdmin(admin.ModelAdmin):
+    list_display = ('callsignid', 'callsignorder', 'name', 'frame' , 'exrequired')
 
 @admin.register(TopicLesson)
 class TopicLessonAdmin(admin.ModelAdmin):
@@ -15,6 +19,10 @@ class TopicLessonAdmin(admin.ModelAdmin):
 @admin.register(Lesson)
 class LessonAdmin(admin.ModelAdmin):
     list_display = ('lessonid', 'lessonorder', 'name', 'description')
+
+@admin.register(LessonInstruction)
+class LessonInstructionAdmin(admin.ModelAdmin):
+    list_display = ('lessoninstructionid', 'lessonid', 'name')
 
 @admin.register(Activity)
 class ActivityAdmin(admin.ModelAdmin):
@@ -39,6 +47,14 @@ admin.site.register(Competition)
 # admin.site.register(CompetitionBadge)
 admin.site.register(TimeTest)
 admin.site.register(ContentTest)
-admin.site.register(Document)
+
+@admin.register(Category)
+class DocumentAdmin(admin.ModelAdmin):
+    list_display = ('categoryid', 'name')
+
+@admin.register(Document)
+class DocumentAdmin(admin.ModelAdmin):
+    list_display = ('documentid', 'title', 'description')
+
 admin.site.register(News)
 # admin.site.register(Contact)

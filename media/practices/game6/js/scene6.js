@@ -36,7 +36,7 @@ class scene6 extends Phaser.Scene{
 		// console.log(flag);
 		if(flag){
 			n1 = this.add.image(220, 432, 'ok').setScale(0.85).setInteractive();
-			var flag_red2 = this.add.image(440, 285, 'flag').setScale(0.6);
+			var flag_red2 = this.add.image(445, 290, 'flag').setScale(0.6);
 			flag_red1.visible = false;
 		}else{
 			n1 = this.add.image(220, 432, 'new').setScale(0.85).setInteractive();
